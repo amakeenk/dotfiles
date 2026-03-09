@@ -1,14 +1,9 @@
 [user]
     name = Alexander Makeenkov
     email = amakeenk@altlinux.org
-    signingkey = /home/amakeenk/.ssh/id_rsa.pub
 [core]
     editor = vim
 [log]
     decorate = auto
 [diff]
     external = difft
-[gpg]
-    format = ssh
-[commit]
-    gpgsign = true
