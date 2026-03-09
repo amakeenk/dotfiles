@@ -41,6 +41,7 @@ ripgrep
 showtime
 starship
 stow
+swappy
 swaync
 systemd-ssh-agent
 thunderbird
