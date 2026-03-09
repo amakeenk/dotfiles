@@ -1,6 +1,6 @@
 #!/bin/bash
 
-choice=$(echo -e "󰐥 Shutdown\n󰜉 Reboot\n󰍃 Logout\n󰌾 Lock\n󰤄 Sleep" | walker --dmenu --hidebar)
+choice=$(echo -e "󰐥 Shutdown\n󰜉 Reboot\n󰍃 Logout\n󰌾 Lock\n󰤄 Sleep" | fuzzel --dmenu)
 case "$choice" in
   "󰐥 Shutdown") systemctl poweroff ;;
   "󰜉 Reboot") systemctl reboot ;;

@@ -14,7 +14,7 @@ ${menu_item_output_clipboard_only}\\n\
 ${menu_item_output_save_file}\\n\
 ${menu_item_output_edit}"
 
-choice=$(echo -e "$menu" | walker --dmenu --hidebar)
+choice=$(echo -e "$menu" | fuzzel --dmenu)
 
 case "$choice" in
   "${menu_item_region_clipboard_only}") hyprshot -m region --clipboard-only ;;
@@ -24,4 +24,3 @@ case "$choice" in
   "${menu_item_output_save_file}")      hyprshot -m output ;;
   "${menu_item_output_edit}")           hyprshot -m output --raw | swappy -f - ;;
 esac
-

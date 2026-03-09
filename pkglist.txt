@@ -11,6 +11,7 @@ fd
 firefox
 fonts-ttf-fira-code-nerd
 fonts-ttf-symbols-nerd
+fuzzel
 fzf
 gnome-text-editor
 hyprland
@@ -45,7 +46,6 @@ swappy
 swaync
 systemd-ssh-agent
 thunderbird
-walker
 waybar
 wl-clipboard
 wlogout
