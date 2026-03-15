@@ -5,7 +5,7 @@ NEW_WALLPAPER_PATH="$(zenity --file-selection)"
 
 magick "${NEW_WALLPAPER_PATH}" "${WALLPAPER_PATH}"
 
-matugen image "${WALLPAPER_PATH}" --debug --show-colors --mode dark
+matugen image "${WALLPAPER_PATH}" --debug --show-colors --mode dark --source-color-index 0
 
 killall -9 hyprpaper; hyprpaper &
 killall -9 waybar; waybar &
