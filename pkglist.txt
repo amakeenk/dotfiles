@@ -11,6 +11,8 @@ fd
 firefox
 fonts-ttf-fira-code-nerd
 fonts-ttf-symbols-nerd
+fractal
+fsel
 fuzzel
 fzf
 gnome-text-editor

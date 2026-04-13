@@ -157,6 +157,9 @@ alias calc='_(){ awk "BEGIN{print $*}";};_'
 alias qwen='qwen -i "Отвечай всегда на русском языке."'
 alias npmu='npm -g update --verbose'
 alias npml='npm -g list'
+alias fscl='fsel --cclip'
+alias wlc='wl-copy'
+alias wlp='wl-paste'
 
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
