@@ -163,7 +163,7 @@ keybinds clear-defaults=true {
         bind "Ctrl o" { SwitchToMode "session"; }
     }
     shared_except "locked" "scroll" "search" "tmux" {
-        bind "Ctrl b" { SwitchToMode "tmux"; }
+        bind "Ctrl /" { SwitchToMode "tmux"; }
     }
     shared_except "locked" "scroll" "search" {
         bind "Ctrl s" { SwitchToMode "scroll"; }
@@ -193,7 +193,7 @@ keybinds clear-defaults=true {
         bind "down" { ScrollDown; }
         bind "up" { ScrollUp; }
         bind "right" { PageScrollDown; }
-        bind "Ctrl b" { PageScrollUp; }
+        bind "Ctrl /" { PageScrollUp; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "normal"; }
         bind "d" { HalfPageScrollDown; }
         bind "Ctrl f" { PageScrollDown; }
@@ -231,7 +231,7 @@ keybinds clear-defaults=true {
         bind "%" { NewPane "right"; SwitchToMode "normal"; }
         bind "," { SwitchToMode "renametab"; }
         bind "[" { SwitchToMode "scroll"; }
-        bind "Ctrl b" { Write 2; SwitchToMode "normal"; }
+        bind "Ctrl /" { Write 2; SwitchToMode "normal"; }
         bind "c" { NewTab; SwitchToMode "normal"; }
         bind "h" { MoveFocus "left"; SwitchToMode "normal"; }
         bind "j" { MoveFocus "down"; SwitchToMode "normal"; }
@@ -241,8 +241,15 @@ keybinds clear-defaults=true {
         bind "o" { FocusNextPane; }
         bind "p" { GoToPreviousTab; SwitchToMode "normal"; }
         bind "z" { ToggleFocusFullscreen; SwitchToMode "normal"; }
+        bind "?" {
+            LaunchOrFocusPlugin "zellij-forgot" {
+                floating true
+            }
+            SwitchToMode "normal"
+        }
     }
 }
+
 
 // Plugin aliases - can be used to change the implementation of Zellij
 // changing these requires a restart to take effect
@@ -261,12 +268,25 @@ plugins {
     welcome-screen location="zellij:session-manager" {
         welcome_screen true
     }
+    zjstatus-hints location="https://github.com/b0o/zjstatus-hints/releases/latest/download/zjstatus-hints.wasm" {
+        pipe_name "zjstatus_hints"
+        hide_in_base_mode false
+    }
+    autolock location="https://github.com/fresh2dev/zellij-autolock/releases/latest/download/zellij-autolock.wasm" {
+        is_enabled true
+        triggers "nvim|vim|git|fzf|zoxide|atuin"
+        reaction_seconds "0.3"
+        print_to_log false
+    }
+    zellij-forgot location="https://github.com/karimould/zellij-forgot/releases/latest/download/zellij_forgot.wasm"
 }
 
 // Plugins to load in the background when a new session starts
 // eg. "file:/path/to/my-plugin.wasm"
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
+    "zjstatus-hints"
+    "autolock"
 }
 web_client {
     font "monospace"
@@ -321,13 +341,14 @@ theme "kanagawa"
 //   - false
 // 
 mouse_mode true
- 
+
 // Toggle having pane frames around the panes
 // Options:
 //   - true (default, enabled)
 //   - false
 // 
-// pane_frames false
+pane_frames true
+
  
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
@@ -423,7 +444,7 @@ scrollback_editor "/usr/bin/nvim"
 // defaults to the scrollback size. If this number is higher than the scrollback size, it will
 // also default to the scrollback size. This does nothing if `serialize_pane_viewport` is not true.
 // 
-// scrollback_lines_to_serialize 10000
+scrollback_lines_to_serialize 0
  
 // Enable or disable the rendering of styled and colored underlines (undercurl).
 // May need to be disabled for certain unsupported terminals
