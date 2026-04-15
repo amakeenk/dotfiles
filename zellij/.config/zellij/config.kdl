@@ -286,7 +286,7 @@ plugins {
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
     "zjstatus-hints"
-    "autolock"
+    // "autolock"
 }
 web_client {
     font "monospace"
