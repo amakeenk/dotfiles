@@ -40,6 +40,7 @@ require("lazy").setup({
 	require("plugins.render-markdown"),
 	require("plugins.telescope"),
 	require("plugins.toggleterm"),
+	require("plugins.treesitter"),
 	require("plugins.trouble"),
 	require("plugins.yazi"),
 	checker = { enabled = true },

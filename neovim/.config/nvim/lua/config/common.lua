@@ -27,6 +27,9 @@ vim.opt.termguicolors = true
 vim.wo.signcolumn = "yes"
 vim.wo.linebreak = true
 
+-- Disable legacy nvim-ts-context-commentstring behavior
+vim.g.skip_ts_context_commentstring_module = true
+
 -- Auto command to open neo-tree when vim starts with no files
 vim.api.nvim_create_autocmd("VimEnter", {
 	callback = function()

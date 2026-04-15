@@ -19,13 +19,21 @@ return {
 			extra = true,
 		},
 		pre_hook = function(ctx)
-			if vim.bo.filetype == "typescript" or vim.bo.filetype == "javascript" then
-				return require("ts_context_commentstring.integration").create_pre_hook()()
+			local ok, integration = pcall(require, "ts_context_commentstring.integrations.comment_nvim")
+			if ok then
+				return integration.create_pre_hook()(ctx)
 			end
 		end,
 	},
 	dependencies = {
-		"JoosepAlviste/nvim-ts-context-commentstring",
+		{
+			"JoosepAlviste/nvim-ts-context-commentstring",
+			lazy = false,
+			dependencies = { "nvim-treesitter/nvim-treesitter" },
+			opts = {
+				enable_autocmd = false,
+			},
+		},
 	},
 	config = function(_, opts)
 		require("Comment").setup(opts)
