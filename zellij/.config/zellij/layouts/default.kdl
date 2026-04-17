@@ -17,7 +17,7 @@ layout {
                 mode_resize       "#[bg=magenta,fg=black] RESIZE "
                 mode_scroll       "#[bg=blue,fg=white] SCROLL "
 
-                datetime        "#[fg=#6C7086,bold] {format} "
+                datetime        "#[fg=green,bold] {format} "
                 datetime_format "%Y-%m-%d %H:%M:%S"
                 datetime_timezone "Europe/Moscow"
             }
