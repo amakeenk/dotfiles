@@ -28,6 +28,7 @@ hyprpicker
 hyprshot
 kitty
 lazygit
+logitune
 matugen
 nautilus
 neovim
