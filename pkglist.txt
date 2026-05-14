@@ -60,3 +60,5 @@ zed
 zellij
 zenity
 zoxide
+helix
+helix-grammars

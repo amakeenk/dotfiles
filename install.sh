@@ -7,6 +7,7 @@ APPS_LIST=(
     "bat"
     "fastfetch"
     "fuzzel"
+    "helix"
     "hyprland"
     "kitty"
     "matugen"
