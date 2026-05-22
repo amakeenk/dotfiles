@@ -3,7 +3,7 @@ if [ -r /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
-export EDITOR=nvim
+export EDITOR=hx
 
 shopt -s histappend
 export HISTCONTROL="ignoredups"
@@ -135,6 +135,7 @@ alias rm='trs -v'
 alias cp='xcp'
 alias zed='zed-editor'
 alias vim='nvim'
+alias h='hx'
 alias girarbuild='ssh girar build'
 alias girarbuildcom='ssh girar build --commit'
 alias girarrun='ssh girar task run'
