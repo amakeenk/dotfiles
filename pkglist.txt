@@ -51,6 +51,7 @@ systemd-ssh-agent
 thunderbird
 waybar
 wl-clipboard
+wl-screenrec
 wlogout
 xcp
 x-cursor-themes-Bibata
