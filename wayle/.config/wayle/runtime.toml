@@ -1,0 +1,62 @@
+[bar]
+scale = 0.800000011920929
+bg = "bg-surface-elevated"
+button-variant = "basic"
+
+[[bar.layout]]
+monitor = "*"
+show = true
+left = [
+    "dashboard",
+    "window-title",
+]
+center = ["hyprland-workspaces"]
+right = [
+    "systray",
+    "clock",
+    "weather",
+]
+
+[styling.palette]
+bg = "#1a1a22"
+surface = "#1f1f28"
+elevated = "#2a2a37"
+fg = "#dcd7ba"
+fg-muted = "#727169"
+primary = "#957fb8"
+red = "#e82424"
+yellow = "#dca561"
+green = "#98bb6c"
+blue = "#7e9cd8"
+
+[modules.clock]
+format = "%T %d.%m.%Y"
+icon-color = "#dcd7ba"
+label-color = "#dcd7ba"
+dropdown-show-seconds = true
+
+[modules.dashboard]
+icon-override = "si-linux-symbolic"
+icon-color = "#dcd7ba"
+right-click = "/usr/bin/wayle-settings"
+dropdown-lock-command = "hyprlock"
+
+[modules.hyprland-workspaces]
+app-icons-show = true
+active-indicator = "underline"
+active-color = "#dcd7ba"
+
+[modules.weather]
+location = "Obninsk"
+icon-color = "#dcd7ba"
+label-color = "#dcd7ba"
+
+[modules.window-title]
+icon-color = "#dcd7ba"
+label-color = "#dcd7ba"
+
+[osd]
+border = false
+
+[wallpaper]
+engine-enabled = false
