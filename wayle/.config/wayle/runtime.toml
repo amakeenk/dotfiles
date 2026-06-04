@@ -7,14 +7,18 @@ button-variant = "basic"
 monitor = "*"
 show = true
 left = [
-    "dashboard",
+    "media",
     "window-title",
 ]
 center = ["hyprland-workspaces"]
 right = [
+    "volume",
+    "notifications",
+    "keyboard-input",
     "systray",
     "clock",
     "weather",
+    "dashboard",
 ]
 
 [styling.palette]
@@ -45,6 +49,34 @@ dropdown-lock-command = "hyprlock"
 app-icons-show = true
 active-indicator = "underline"
 active-color = "#dcd7ba"
+
+[modules.keyboard-input]
+icon-color = "#dcd7ba"
+label-color = "#dcd7ba"
+
+[modules.keyboard-input.layout-alias-map]
+Russian = "RU"
+"English (US)" = "US"
+
+[modules.media]
+format = "{{ artist }} - {{ title }}"
+icon-color = "#dcd7ba"
+label-color = "#dcd7ba"
+label-max-length = 50
+
+[modules.notifications]
+icon-color = "#dcd7ba"
+label-color = "#dcd7ba"
+popup-position = "bottom-center"
+popup-max-visible = 3
+
+[modules.volume]
+icon-color = "#dcd7ba"
+label-color = "#dcd7ba"
+right-click = "wayle audio output-mute"
+middle-click = ""
+scroll-up = "wayle audio output-volume +1"
+scroll-down = "wayle audio output-volume -1"
 
 [modules.weather]
 location = "Obninsk"
