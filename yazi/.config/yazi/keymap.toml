@@ -1,0 +1,14 @@
+[[mgr.prepend_keymap]]
+on   = [ "C" ]
+run  = "plugin ouch"
+desc = "Compress with ouch"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "m" ]
+run  = "plugin chmod"
+desc = "Chmod on selected files"
+
+[[mgr.prepend_keymap]]
+on = [ "y", "c" ]
+run = "plugin copy-file-contents"
+desc = "Copy file contents to clipboard"
