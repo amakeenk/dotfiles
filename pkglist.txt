@@ -49,6 +49,7 @@ stow
 swappy
 systemd-ssh-agent
 thunderbird
+viu
 waybar
 wayle
 wl-clipboard
