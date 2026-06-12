@@ -163,6 +163,8 @@ alias fscl='fsel --cclip'
 alias wlc='wl-copy'
 alias wlp='wl-paste'
 alias tvp='tv procs'
+alias tvf='tv files'
+alias tvt='tv text'
 
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
