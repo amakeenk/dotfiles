@@ -2,7 +2,7 @@
     name = Alexander Makeenkov
     email = amakeenk@altlinux.org
 [core]
-    editor = vim
+    editor = hx
 [log]
     decorate = auto
 [diff]
