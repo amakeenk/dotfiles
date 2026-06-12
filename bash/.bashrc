@@ -162,6 +162,7 @@ alias npml='npm -g list'
 alias fscl='fsel --cclip'
 alias wlc='wl-copy'
 alias wlp='wl-paste'
+alias tvp='tv procs'
 
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
