@@ -28,6 +28,16 @@ q = ":quit"
 Q = ":write-quit-all"
 x = ":quit!"
 X = ":quit-all!"
+e = [
+	':sh rm -f /tmp/unique-ca1ea106',
+	':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-ca1ea106',
+	':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+	':open %sh{cat /tmp/unique-ca1ea106}',
+	':redraw',
+	':set mouse false',
+	':set mouse true',
+]
+
 
 [keys.select]
 y = "yank_main_selection_to_clipboard"
