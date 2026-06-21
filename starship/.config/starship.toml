@@ -10,31 +10,48 @@ $status\
 $character"""
 
 add_newline = false
+palette = "kanagawa"
+
+[palettes.kanagawa]
+sumiink1 = "#16161D"
+fujiwhite = "#DCD7BA"
+oldwhite = "#C8C093"
+springgreen = "#98BB6C"
+autumngreen = "#76946A"
+autumnred = "#C34043"
+autumnyellow = "#DCA561"
+samuraired = "#E82424"
+crystalblue = "#7E9CD8"
+waveaqua1 = "#6A9589"
+oniviolet = "#957FB8"
+springviolet1 = "#938AA9"
+roninyellow = "#FF9E3B"
 
 [time]
 disabled = false
 format = "[$time]($style) "
-style = "bold purple"
+style = "bold springviolet1"
 
 [hostname]
 ssh_only = true
 trim_at = ''
-format = 'ssh on [$hostname](bold red) '
+format = 'ssh on [$hostname](bold autumnred) '
 
 [cmd_duration]
 min_time = 500
 format = "[$duration]($style) "
-style = "bold purple"
+style = "bold autumnyellow"
 
 [username]
 disabled = false
 format = "[$user]($style) "
-style_user = "bold blue"
+style_user = "bold crystalblue"
 show_always = true
 
 [directory]
 disabled = false
 format = "[$path]($style) "
+style = "bold waveaqua1"
 truncation_length = 8
 truncation_symbol = "…/"
 truncate_to_repo = false
@@ -42,19 +59,22 @@ truncate_to_repo = false
 [git_branch]
 disabled = false
 format = "[$symbol$branch(:$remote_branch)]($style) "
+style = "bold oniviolet"
 
 [git_status]
 disabled = false
 format = "([$all_status$ahead_behind]($style) )"
+style = "bold autumnred"
 
 [status]
 disabled = false
 success_symbol = ''
 format = "[$status]($style) "
 map_symbol = true
+style = "bold autumnred"
 
 [character]
 disabled = false
-success_symbol = "[\\$](bold green)"
-error_symbol = "[\\$](bold green)"
+success_symbol = "[\\$](bold springgreen)"
+error_symbol = "[\\$](bold autumnred)"
 format = "$symbol "
