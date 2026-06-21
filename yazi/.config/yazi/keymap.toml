@@ -47,3 +47,18 @@ desc = "Switch or create tab 2"
 [[mgr.prepend_keymap]]
 on  = "q"
 run = "plugin confirm-quit"
+
+[[mgr.prepend_keymap]]
+on  = ["T", "f"]
+run = "plugin tv"
+desc = "Jump to a file via television"
+
+[[mgr.prepend_keymap]]
+on  = ["T", "d"]
+run = "plugin tv dirs"
+desc = "Jump to a directory via television"
+
+[[mgr.prepend_keymap]]
+on  = ["T", "t"]
+run = "plugin tv text"
+desc = "Open files using neovim and jump to where the string is located"
