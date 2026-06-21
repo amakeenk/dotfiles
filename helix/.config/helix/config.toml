@@ -20,6 +20,7 @@ y = "yank_main_selection_to_clipboard"
 p = "paste_clipboard_after"
 P = "paste_clipboard_before"
 R = "replace_selections_with_clipboard"
+F2 = ":toggle whitespace.render all none"
 
 [keys.normal.space]
 w = ":write"
@@ -28,6 +29,7 @@ q = ":quit"
 Q = ":write-quit-all"
 x = ":quit!"
 X = ":quit-all!"
+r = ":reload"
 e = [
 	':sh rm -f /tmp/unique-ca1ea106',
 	':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-ca1ea106',
