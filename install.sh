@@ -13,7 +13,6 @@ APPS_LIST=(
     "matugen"
     "neovim"
     "starship"
-    "waybar"
     "yazi"
     "zed"
     "zellij"
