@@ -12,6 +12,7 @@ left = [
 ]
 center = ["hyprland-workspaces"]
 right = [
+    "custom-updates",
     "volume",
     "notifications",
     "keyboard-input",
@@ -86,6 +87,33 @@ label-color = "#dcd7ba"
 [modules.window-title]
 icon-color = "#dcd7ba"
 label-color = "#dcd7ba"
+
+[[modules.custom]]
+id = "updates"
+command = "~/.config/wayle/scripts/check_updates.sh"
+mode = "poll"
+interval-ms = 21600000
+restart-policy = "never"
+restart-interval-ms = 1000
+format = "{{ text }}"
+tooltip-format = "{{ tooltip }}"
+hide-if-empty = false
+icon-name = "ld-refresh-cw-symbolic"
+class-format = "{{ class }}"
+icon-show = true
+icon-color = "#dcd7ba"
+icon-bg-color = "auto"
+label-show = true
+label-color = "#dcd7ba"
+label-max-length = 0
+button-bg-color = "bg-surface-elevated"
+border-show = false
+border-color = "auto"
+left-click = "kitty --title float_terminal ~/.config/wayle/scripts/update_system.sh"
+right-click = ""
+middle-click = ""
+scroll-up = ""
+scroll-down = ""
 
 [osd]
 border = false
