@@ -5,6 +5,14 @@ fi
 
 export EDITOR=hx
 
+# .bash_profile exports BASH_ENV=~/.bashrc, so this file is also sourced by
+# non-interactive bash processes. Keep aliases/functions available there, but
+# guard readline- and prompt-specific setup below.
+case $- in
+    *i*) __bash_is_interactive=1 ;;
+    *) __bash_is_interactive=0 ;;
+esac
+
 shopt -s histappend
 export HISTCONTROL="ignoredups"
 shopt -s cdspell
@@ -72,6 +80,22 @@ acs (){
     apt-cache search $pkg | rg --ignore-case $pkg
 }
 
+u() {
+    clean_old_tasks && sudo apt-get update
+}
+
+ud() {
+    u && sudo apt-get -V dist-upgrade
+}
+
+udk() {
+    ud && sudo update-kernel && cleannodepslibs
+}
+
+udkc() {
+    sudo apt-repo clean && udk
+}
+
 # yazi
 y() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -88,17 +112,15 @@ _aichat_bash() {
         READLINE_POINT=${#READLINE_LINE}
     fi
 }
-bind -x '"\ee": _aichat_bash'
+if [ "$__bash_is_interactive" -eq 1 ]; then
+    bind -x '"\ee": _aichat_bash'
+fi
 
 alias ls='eza --icons --header --group-directories-first'
 alias ll='ls -la'
 alias l='ls -l'
 alias ltree='eza -T --level '
 alias df='duf'
-alias u='clean_old_tasks && sudo apt-get update'
-alias ud='u && sudo apt-get -V dist-upgrade'
-alias udk='ud && sudo update-kernel && cleannodepslibs'
-alias udkc='sudo apt-repo clean && udk'
 alias ara='sudo apt-repo add'
 alias arm='sudo apt-repo rm'
 alias art='clean_old_tasks && sudo apt-repo test'
@@ -166,10 +188,12 @@ alias tvp='tv procs'
 alias tvf='tv files'
 alias tvt='tv text'
 
-eval "$(starship init bash)"
-eval "$(fzf --bash)"
-eval "$(zoxide init --cmd cd bash)"
-eval "$(atuin init bash)"
+if [ "$__bash_is_interactive" -eq 1 ]; then
+    eval "$(starship init bash)"
+    eval "$(fzf --bash)"
+    eval "$(zoxide init --cmd cd bash)"
+    eval "$(atuin init bash)"
+fi
 
 # for kitty
 export TERM=xterm-256color
@@ -181,3 +205,5 @@ export PATH=~/.npm-global/bin:$PATH
 if [ -r ~/.bashrc_priv ]; then
     . ~/.bashrc_priv
 fi
+
+unset __bash_is_interactive
