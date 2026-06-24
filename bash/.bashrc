@@ -105,15 +105,19 @@ y() {
     rm -f -- "$tmp"
 }
 
-# aichat
-_aichat_bash() {
+# tgpt
+_tgpt_bash() {
+    local cmd
     if [[ -n "$READLINE_LINE" ]]; then
-        READLINE_LINE=$(aichat -e "$READLINE_LINE")
+        cmd=$(tgpt -q -w --provider pollinations --preprompt 'Ты shell assistant для Linux bash. Верни только одну bash-команду без markdown, без объяснений. Не выполняй команду.' "$READLINE_LINE")
+        cmd=${cmd//$'\r'/}
+        cmd=${cmd%$'\n'}
+        READLINE_LINE=$cmd
         READLINE_POINT=${#READLINE_LINE}
     fi
 }
 if [ "$__bash_is_interactive" -eq 1 ]; then
-    bind -x '"\ee": _aichat_bash'
+    bind -x '"\ee": _tgpt_bash'
 fi
 
 alias ls='eza --icons --header --group-directories-first'

@@ -1,4 +1,4 @@
-aichat
+tgpt
 amberol
 atuin
 blueman
