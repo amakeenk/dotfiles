@@ -45,7 +45,7 @@ rewaita
 ripgrep
 showtime
 starship
-stow
+tuckr
 swappy
 systemd-ssh-agent
 thunderbird

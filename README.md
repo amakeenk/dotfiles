@@ -1,28 +1,13 @@
-## Hyprland setup
+My dotfiles managed by tuckr.
 
-### Install required packages
-
+## Installation
 ```console
-# apt-get install $(cat pkglist.txt)
-```
+# apt-get install tuckr
 
-### Install configs
+$ git clone https://altlinux.space/amakeenk/dotfiles ~/.dotfiles && \
+  cd ~/.dotfiles
 
-```console
-$ ./install.sh <app_name|all>
-```
+$ tuckr add '*'
 
-### Install Kanagawa GKT theme
-
-```console
-$ cd /tmp && git clone https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme && \
-cd Kanagawa-GKT-Theme/themes && \
-./install.sh --tweaks black -t all -l
-```
-
-### Configure kitty theme
-
-```console
-$ kitty +kitten themes --config-file-name theme.conf && \
-kill -SIGUSR1 $KITTY_PID
+$ tuckr status
 ```
