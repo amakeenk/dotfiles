@@ -96,6 +96,13 @@ udkc() {
     sudo apt-repo clean && udk
 }
 
+cleannodepslibs() {
+    mapfile -t _pkgs < <(apt-cache list-nodeps | grep -E '^lib[^-]*$|-common$|-compat$' | grep -Ev 'libvirt')
+    if ((${#_pkgs[@]} > 0)); then
+        sudo apt-get -V remove "${_pkgs[@]}"
+    fi
+}
+
 # yazi
 y() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -155,7 +162,6 @@ alias lg='lazygit'
 alias gplsm='git pull && git submodule update --init --recursive'
 alias vhost='sudo vim /etc/hosts'
 alias svim='sudo vim'
-alias cleannodepslibs='agrp $(apt-cache list-nodeps | grep -E "^lib[^-]*$|-common$|-compat$" | grep -Ev "libvirt")'
 alias task_watch='neowatch -n 5 -d girar-show'
 alias rm='trs -v'
 alias cp='xcp'
