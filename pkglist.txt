@@ -23,6 +23,7 @@ hyprland-plugin-dynamic-cursors
 hyprland-plugin-hyprexpo
 hyprland-qtutils
 hyprlock
+hyprlax
 hyprls
 hyprpaper
 hyprpicker
