@@ -4,7 +4,6 @@ while ! ping -c 1 8.8.8.8 &>/dev/null; do
     sleep 5
 done
 
-shopt -s expand_aliases
 source ~/.bashrc
 
 UPDATES_COUNT=0
