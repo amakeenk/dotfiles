@@ -53,6 +53,11 @@ use = "cap153/tv"
 rev = "b6b1f12"
 hash = "4bdf0523d3711d20982ad80b061dedf2"
 
+[[plugin.deps]]
+use = "terrakok/split-tabs"
+rev = "da25bc0"
+hash = "108ee3048ba3a0d1ba77df7c41bcb7fe"
+
 [[flavor.deps]]
 use = "dangooddd/kanagawa"
 rev = "04985d1"
