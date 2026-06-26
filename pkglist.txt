@@ -27,6 +27,7 @@ hyprlax
 hyprls
 hyprpaper
 hyprpicker
+hyprscratch
 hyprshot
 kitty
 lazygit

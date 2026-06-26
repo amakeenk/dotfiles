@@ -48,6 +48,7 @@ dropdown-lock-command = "hyprlock"
 
 [modules.hyprland-workspaces]
 app-icons-show = true
+show-special = false
 active-indicator = "underline"
 active-color = "#dcd7ba"
 
