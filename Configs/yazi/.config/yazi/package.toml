@@ -9,11 +9,6 @@ rev = "406ce6c"
 hash = "f5afc904d5106ee368c8aa2ded43bd74"
 
 [[plugin.deps]]
-use = "Rolv-Apneseth/starship"
-rev = "a837101"
-hash = "635b0feb9215772d22020eb0abf0bb34"
-
-[[plugin.deps]]
 use = "llanosrocas/yaziline"
 rev = "25161c1"
 hash = "5c7802a9ac249be88729978e3b9525bc"
