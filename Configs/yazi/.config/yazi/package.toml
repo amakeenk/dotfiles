@@ -58,6 +58,11 @@ use = "ahkohd/eza-preview"
 rev = "e8fb6c8"
 hash = "c238595c801caa4f28553b9af8cf8804"
 
+[[plugin.deps]]
+use = "kirasok/torrent-preview"
+rev = "f465282"
+hash = "d849ad596b8a77902e62a42403aeba40"
+
 [[flavor.deps]]
 use = "dangooddd/kanagawa"
 rev = "04985d1"

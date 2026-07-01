@@ -27,6 +27,10 @@ mime = "application/pdf"
 run = 'faster-piper -- pdftoppm -r 220 -f 1 -singlefile -png "$1" | viu -w $w -'
 
 [[plugin.prepend_previewers]]
+mime = "application/bittorrent"
+run = "torrent-preview"
+
+[[plugin.prepend_previewers]]
 mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd}"
 run = "ouch"
 
