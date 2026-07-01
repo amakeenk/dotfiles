@@ -8,7 +8,11 @@ linemode = "mtime"
 
 [[plugin.prepend_previewers]]
 mime = "image/*"
-run = 'faster-piper -- viu -w $w "$1"'
+run = 'faster-piper -- "$HOME/.config/yazi/scripts/media-preview.sh" "$1" "$w" "$h"'
+
+[[plugin.prepend_previewers]]
+mime = "{audio,video}/*"
+run = 'faster-piper -- "$HOME/.config/yazi/scripts/media-preview.sh" "$1" "$w" "$h"'
 
 [[plugin.prepend_previewers]]
 mime = "application/pdf"
