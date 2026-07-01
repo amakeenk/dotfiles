@@ -15,6 +15,10 @@ mime = "{audio,video}/*"
 run = 'faster-piper -- "$HOME/.config/yazi/scripts/media-preview.sh" "$1" "$w" "$h"'
 
 [[plugin.prepend_previewers]]
+mime = "text/markdown"
+run = 'faster-piper -- glow -w $w "$1"'
+
+[[plugin.prepend_previewers]]
 mime = "application/pdf"
 run = 'faster-piper -- pdftoppm -r 220 -f 1 -singlefile -png "$1" | viu -w $w -'
 
