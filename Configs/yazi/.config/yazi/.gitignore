@@ -1,6 +1,7 @@
 flavors/kanagawa.yazi/
 plugins/chmod.yazi/
 plugins/copy-file-contents.yazi/
+plugins/eza-preview.yazi/
 plugins/faster-piper.yazi/
 plugins/full-border.yazi/
 plugins/mime-ext.yazi/

@@ -7,6 +7,10 @@ sort_dir_first = true
 linemode = "mtime"
 
 [[plugin.prepend_previewers]]
+url = "*/"
+run = "eza-preview"
+
+[[plugin.prepend_previewers]]
 mime = "image/*"
 run = 'faster-piper -- "$HOME/.config/yazi/scripts/media-preview.sh" "$1" "$w" "$h"'
 

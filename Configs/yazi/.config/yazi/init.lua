@@ -1,4 +1,14 @@
 require("full-border"):setup()
+require("eza-preview"):setup({
+	default_tree = true,
+	level = 2,
+	icons = true,
+	follow_symlinks = false,
+	all = false,
+	ignore_glob = { ".git", "node_modules", "target", ".cache" },
+	git_ignore = true,
+	git_status = false,
+})
 require("yaziline"):setup({
   filename_max_length = 50,
   filename_truncate_length = 20,

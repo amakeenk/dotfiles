@@ -53,6 +53,11 @@ use = "terrakok/split-tabs"
 rev = "da25bc0"
 hash = "108ee3048ba3a0d1ba77df7c41bcb7fe"
 
+[[plugin.deps]]
+use = "ahkohd/eza-preview"
+rev = "e8fb6c8"
+hash = "c238595c801caa4f28553b9af8cf8804"
+
 [[flavor.deps]]
 use = "dangooddd/kanagawa"
 rev = "04985d1"

@@ -9,6 +9,37 @@ on = "<Esc>"
 run = "close"
 desc = "Cancel input"
 
+# -== plugin eza-preview ==-
+[[mgr.prepend_keymap]]
+on = [ "e", "t" ]
+run = "plugin eza-preview"
+desc = "Toggle tree/list directory preview"
+
+[[mgr.prepend_keymap]]
+on = [ "e", "+" ]
+run = "plugin eza-preview inc-level"
+desc = "Increase directory preview depth"
+
+[[mgr.prepend_keymap]]
+on = [ "e", "-" ]
+run = "plugin eza-preview dec-level"
+desc = "Decrease directory preview depth"
+
+[[mgr.prepend_keymap]]
+on = [ "e", "." ]
+run = "plugin eza-preview toggle-hidden"
+desc = "Toggle hidden files in directory preview"
+
+[[mgr.prepend_keymap]]
+on = [ "e", "i" ]
+run = "plugin eza-preview toggle-git-ignore"
+desc = "Toggle gitignored files in directory preview"
+
+[[mgr.prepend_keymap]]
+on = [ "e", "g" ]
+run = "plugin eza-preview toggle-git-status"
+desc = "Toggle Git status in directory preview"
+
 # -== plugin ouch ==-
 [[mgr.prepend_keymap]]
 on = [ "C" ]
