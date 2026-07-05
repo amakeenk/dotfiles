@@ -80,6 +80,55 @@ acs (){
     apt-cache search $pkg | rg --ignore-case $pkg
 }
 
+lv() {
+    local follow=0 paginate=0 OPTIND=1 _opt
+
+    while getopts ":fph" _opt; do
+        case "$_opt" in
+            f) follow=1 ;;
+            p) paginate=1 ;;
+            h)
+                echo "Usage: lv [-f] FILE | lv [-p] < INPUT"
+                return
+                ;;
+            \?)
+                echo "lv: unknown option: -$OPTARG" >&2
+                echo "Usage: lv [-f] FILE | lv [-p] < INPUT" >&2
+                return 2
+                ;;
+        esac
+    done
+    shift $((OPTIND - 1))
+
+    if (($# > 1)); then
+        echo "Usage: lv [-f] FILE | lv [-p] < INPUT" >&2
+        return 2
+    fi
+
+    if ((follow)); then
+        if ((paginate)); then
+            echo "lv: -f and -p cannot be used together" >&2
+            return 2
+        fi
+        if (($# == 0)); then
+            echo "lv: -f requires a file" >&2
+            return 2
+        fi
+        tail -f -- "$1" | bat --paging=never -l log
+    elif (($# == 1)); then
+        bat --paging=always -l log -- "$1"
+    elif [[ ! -t 0 ]]; then
+        if ((paginate)); then
+            bat --paging=always -l log
+        else
+            bat --paging=never -l log
+        fi
+    else
+        echo "Usage: lv [-f] FILE | lv [-p] < INPUT" >&2
+        return 2
+    fi
+}
+
 u() {
     clean_old_tasks && sudo apt-get update
 }
