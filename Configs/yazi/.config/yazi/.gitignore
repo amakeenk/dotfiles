@@ -4,6 +4,7 @@ plugins/copy-file-contents.yazi/
 plugins/eza-preview.yazi/
 plugins/faster-piper.yazi/
 plugins/full-border.yazi/
+plugins/fs-usage.yazi/
 plugins/linemode-plus.yazi/
 plugins/mime-ext.yazi/
 plugins/ouch.yazi/

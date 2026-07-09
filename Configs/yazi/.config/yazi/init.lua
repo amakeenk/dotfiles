@@ -26,6 +26,12 @@ require("linemode-plus"):setup({
 		year_digits = 4,
 	},
 })
+require("fs-usage"):setup({
+	position = { parent = "Header", align = "RIGHT", order = 2000 },
+	format = "both",
+	bar = true,
+	warning_threshold = 90,
+})
 Status:children_add(function(self)
 	local h = self._current.hovered
 	if h and h.link_to then

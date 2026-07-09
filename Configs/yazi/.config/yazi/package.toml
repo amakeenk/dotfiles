@@ -68,6 +68,11 @@ use = "barbanevosa/linemode-plus"
 rev = "4d0d034"
 hash = "5d0ac26725d9a975bef1d0887374f10e"
 
+[[plugin.deps]]
+use = "walldmtd/fs-usage"
+rev = "4f4992b"
+hash = "61410fb3409c22990a52767c738c2722"
+
 [[flavor.deps]]
 use = "dangooddd/kanagawa"
 rev = "04985d1"
