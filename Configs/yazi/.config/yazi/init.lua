@@ -14,6 +14,10 @@ require("yaziline"):setup({
   filename_truncate_length = 20,
   filename_truncate_separator = "..."
 })
+require("copy-file-contents"):setup({
+	append_char = "\n",
+	notification = true,
+})
 Status:children_add(function(self)
 	local h = self._current.hovered
 	if h and h.link_to then
