@@ -18,6 +18,14 @@ require("copy-file-contents"):setup({
 	append_char = "\n",
 	notification = true,
 })
+require("linemode-plus"):setup({
+	date_mode = "custom",
+	custom = {
+		order = { "day", "month", "year" },
+		separator = ".",
+		year_digits = 4,
+	},
+})
 Status:children_add(function(self)
 	local h = self._current.hovered
 	if h and h.link_to then

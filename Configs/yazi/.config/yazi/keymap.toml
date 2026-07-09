@@ -52,6 +52,12 @@ on = [ "c", "m" ]
 run = "plugin chmod"
 desc = "Chmod on selected files"
 
+# -== plugin linemode-plus ==-
+[[mgr.prepend_keymap]]
+on = [ "m", "c" ]
+run = "linemode size_mtime"
+desc = "Linemode: size and modified time"
+
 # -== plugin copy-file-contents ==-
 [[mgr.prepend_keymap]]
 on = [ "y", "c" ]
