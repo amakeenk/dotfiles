@@ -11,7 +11,7 @@ fi
 
 magick "${NEW_WALLPAPER_PATH}" "${WALLPAPER_PATH}"
 
-killall -q hyprlax 2>/dev/null || true
-~/.config/hypr/scripts/start_hyprlax.sh &
+killall -q hyprpaper 2>/dev/null || true
+hyprpaper &
 
 notify-send --expire-time=3000 "Фоновое изображение изменено" "Новое изображение: ${NEW_WALLPAPER_PATH}"
