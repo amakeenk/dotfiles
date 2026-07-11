@@ -47,8 +47,8 @@ right-click = "/usr/bin/wayle-settings"
 dropdown-lock-command = "hyprlock"
 
 [modules.hyprland-workspaces]
-app-icons-show = true
 show-special = false
+app-icons-show = true
 active-indicator = "underline"
 active-color = "#dcd7ba"
 
@@ -57,8 +57,8 @@ icon-color = "#dcd7ba"
 label-color = "#dcd7ba"
 
 [modules.keyboard-input.layout-alias-map]
-Russian = "RU"
 "English (US)" = "US"
+Russian = "RU"
 
 [modules.media]
 format = "{{ artist }} - {{ title }}"
