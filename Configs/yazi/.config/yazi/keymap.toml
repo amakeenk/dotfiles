@@ -9,6 +9,12 @@ on = "<Esc>"
 run = "close"
 desc = "Cancel input"
 
+# -== plugin hxjump ==-
+[[mgr.prepend_keymap]]
+on = "n"
+run = "plugin hxjump"
+desc = "Jump to an item by label"
+
 # -== plugin eza-preview ==-
 [[mgr.prepend_keymap]]
 on = [ "e", "t" ]
