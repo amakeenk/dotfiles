@@ -23,6 +23,9 @@ Use the formatter implied by the Neovim setup when possible: `shfmt` for shell, 
 There is no centralized automated test suite, so validate only what you touched. Re-run syntax checks for edited scripts, run `tuckr status`, and manually verify UI-facing changes in the relevant app. For Hyprland, Wayle, Kitty, or Yazi changes, include a short note on what was exercised; screenshots are useful when appearance or layout changed.
 
 ## Commit & Pull Request Guidelines
-Recent history follows short, scoped subjects such as `hyprland: integrate hyprscratch scratchpads` and `fix(wayle): stop expanding bash aliases in scripts`. Prefer one of those patterns: `<scope>: imperative summary` or `fix(<scope>): imperative summary`.
+Recent history follows short, scoped subjects such as `hyprland: integrate hyprscratch scratchpads` and `fix(wayle): stop expanding bash aliases in scripts`. Prefer one of these patterns: `<scope>: imperative summary`, `feat(<scope>): imperative summary` for new functionality, or `fix(<scope>): imperative summary` for bug fixes.
 
 Keep commits focused on one tool or subsystem. Pull requests should explain affected paths, describe manual verification, and link related issues or task IDs when applicable.
+
+## Yazi Plugins
+When installing a Yazi plugin under `Configs/yazi/.config/yazi/plugins/`, add its directory to `Configs/yazi/.config/yazi/.gitignore`. Installed plugin sources are not tracked; commit only the Yazi configuration that enables or configures the plugin (such as `init.lua`, `keymap.toml`, `theme.toml`, or `package.toml`).
