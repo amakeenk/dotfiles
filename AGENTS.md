@@ -23,7 +23,7 @@ Use the formatter implied by the Neovim setup when possible: `shfmt` for shell, 
 There is no centralized automated test suite, so validate only what you touched. Re-run syntax checks for edited scripts, run `tuckr status`, and manually verify UI-facing changes in the relevant app. For Hyprland, Wayle, Kitty, or Yazi changes, include a short note on what was exercised; screenshots are useful when appearance or layout changed.
 
 ## Commit & Pull Request Guidelines
-Recent history follows short, scoped subjects such as `hyprland: integrate hyprscratch scratchpads` and `fix(wayle): stop expanding bash aliases in scripts`. Prefer one of these patterns: `<scope>: imperative summary`, `feat(<scope>): imperative summary` for new functionality, or `fix(<scope>): imperative summary` for bug fixes.
+Recent history follows short, scoped subjects such as `hyprland: integrate hyprscratch scratchpads` and `fix(wayle): stop expanding bash aliases in scripts`. A scope is mandatory for every commit message. Use one of these patterns: `<scope>: imperative summary`, `feat(<scope>): imperative summary` for new functionality, or `fix(<scope>): imperative summary` for bug fixes.
 
 Keep commits focused on one tool or subsystem. Pull requests should explain affected paths, describe manual verification, and link related issues or task IDs when applicable.
 
