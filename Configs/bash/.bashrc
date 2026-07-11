@@ -114,14 +114,14 @@ lv() {
             echo "lv: -f requires a file" >&2
             return 2
         fi
-        tail -f -- "$1" | bat --paging=never -l log
+        tail -f -- "$1" | bat --style=-numbers --paging=never -l log
     elif (($# == 1)); then
-        bat --paging=always -l log -- "$1"
+        bat --style=-numbers --paging=always -l log -- "$1"
     elif [[ ! -t 0 ]]; then
         if ((paginate)); then
-            bat --paging=always -l log
+            bat --style=-numbers --paging=always -l log
         else
-            bat --paging=never -l log
+            bat --style=-numbers --paging=never -l log
         fi
     else
         echo "Usage: lv [-f] FILE | lv [-p] < INPUT" >&2
