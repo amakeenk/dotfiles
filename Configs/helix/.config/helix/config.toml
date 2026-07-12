@@ -21,6 +21,8 @@ p = "paste_clipboard_after"
 P = "paste_clipboard_before"
 R = "replace_selections_with_clipboard"
 F2 = ":toggle whitespace.render all none"
+C-left = "move_prev_word_start"
+C-right = "move_next_word_start"
 
 [keys.normal.space]
 w = ":write"
@@ -46,3 +48,7 @@ y = "yank_main_selection_to_clipboard"
 p = "paste_clipboard_after"
 P = "paste_clipboard_before"
 R = "replace_selections_with_clipboard"
+
+[keys.insert]
+C-left = "move_prev_word_start"
+C-right = "move_next_word_start"
