@@ -50,21 +50,10 @@ extract = [
 [open]
 prepend_rules = [
 	{ mime = "image/*", use = "image" },
+	{ mime = "text/plain", use = "edit" },
 	{ mime = "text/*", use = "edit" },
 	{ mime = "application/json", use = "edit" },
 ]
-
-[[plugin.prepend_fetchers]]
-url   = "local://*"
-run   = "mime-ext.local"
-prio  = "high"
-group = "mime"
-
-[[plugin.prepend_fetchers]]
-url   = "remote://*"
-run   = "mime-ext.remote"
-prio  = "high"
-group = "mime"
 
 [preview]
 image_delay = 0
