@@ -1,0 +1,3 @@
+[keybindings]
+video_seek = "pageupdown"
+file_browse = "arrows"
