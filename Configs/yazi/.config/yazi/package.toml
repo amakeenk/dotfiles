@@ -68,6 +68,11 @@ use = "walldmtd/fs-usage"
 rev = "4f4992b"
 hash = "61410fb3409c22990a52767c738c2722"
 
+[[plugin.deps]]
+use = "uhs-robert/sshfs"
+rev = "a8b8903"
+hash = "8c1b36103121a66b37308afaf7124575"
+
 [[flavor.deps]]
 use = "dangooddd/kanagawa"
 rev = "04985d1"

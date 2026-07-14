@@ -11,6 +11,7 @@ fonts-ttf-fira-code-nerd
 fonts-ttf-symbols-nerd
 fractal
 fsel
+fuse-sshfs
 fuzzel
 fzf
 gnome-text-editor

@@ -1,5 +1,6 @@
 require("full-border"):setup()
 require("hxjump"):setup()
+require("sshfs"):setup()
 require("eza-preview"):setup({
 	default_tree = true,
 	level = 2,

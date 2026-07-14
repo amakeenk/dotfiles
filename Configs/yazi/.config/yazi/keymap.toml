@@ -15,6 +15,12 @@ on = "n"
 run = "plugin hxjump"
 desc = "Jump to an item by label"
 
+# -== plugin sshfs ==-
+[[mgr.prepend_keymap]]
+on = [ "M", "s" ]
+run = "plugin sshfs -- menu"
+desc = "Open SSHFS options"
+
 # -== plugin eza-preview ==-
 [[mgr.prepend_keymap]]
 on = [ "e", "t" ]

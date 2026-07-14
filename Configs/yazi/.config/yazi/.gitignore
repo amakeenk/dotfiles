@@ -11,6 +11,7 @@ plugins/mime-ext.yazi/
 plugins/ouch.yazi/
 plugins/smart-enter.yazi/
 plugins/smart-paste.yazi/
+plugins/sshfs.yazi/
 plugins/split-tabs.yazi/
 plugins/torrent-preview.yazi/
 plugins/tv.yazi/
