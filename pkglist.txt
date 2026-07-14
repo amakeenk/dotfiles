@@ -1,7 +1,6 @@
 tgpt
 amberol
 atuin
-blueman
 bottom
 ddclight
 eza
@@ -20,7 +19,6 @@ helix-grammars
 hyprland
 hyprland-per-window-layout
 hyprland-plugin-dynamic-cursors
-hyprland-plugin-hyprexpo
 hyprland-qtutils
 hyprlock
 hyprls
@@ -34,10 +32,8 @@ logitune
 nautilus
 neovim
 neowatch
-NetworkManager-applet-gtk
 nwg-look
 papirus-remix-icon-theme
-playerctl
 polkit-gnome
 pwvucontrol
 qview

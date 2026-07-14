@@ -17,8 +17,10 @@ right = [
     "notifications",
     "keyboard-input",
     "systray",
+    "custom-vpn",
+    "network",
+    "bluetooth",
     "clock",
-    "weather",
     "dashboard",
 ]
 
@@ -33,6 +35,12 @@ red = "#e82424"
 yellow = "#dca561"
 green = "#98bb6c"
 blue = "#7e9cd8"
+
+[modules.bluetooth]
+border-color = "#dcd7ba"
+icon-color = "#dcd7ba"
+icon-bg-color = "#dcd7ba"
+label-color = "#dcd7ba"
 
 [modules.clock]
 format = "%T %d.%m.%Y"
@@ -66,6 +74,12 @@ icon-color = "#dcd7ba"
 label-color = "#dcd7ba"
 label-max-length = 50
 
+[modules.network]
+border-color = "#dcd7ba"
+icon-color = "#dcd7ba"
+icon-bg-color = "#dcd7ba"
+label-color = "#dcd7ba"
+
 [modules.notifications]
 icon-color = "#dcd7ba"
 label-color = "#dcd7ba"
@@ -88,6 +102,31 @@ label-color = "#dcd7ba"
 [modules.window-title]
 icon-color = "#dcd7ba"
 label-color = "#dcd7ba"
+
+[[modules.custom]]
+id = "vpn"
+command = "~/.config/wayle/scripts/vpn_connection.sh"
+mode = "poll"
+interval-ms = 5000
+restart-policy = "never"
+restart-interval-ms = 1000
+format = "{{ output }}"
+hide-if-empty = true
+icon-name = "ld-globe-symbolic"
+icon-show = true
+icon-color = "#dcd7ba"
+icon-bg-color = "auto"
+label-show = true
+label-color = "#dcd7ba"
+label-max-length = 0
+button-bg-color = "bg-surface-elevated"
+border-show = false
+border-color = "auto"
+left-click = ""
+right-click = ""
+middle-click = ""
+scroll-up = ""
+scroll-down = ""
 
 [[modules.custom]]
 id = "updates"
