@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+config_file="${XDG_CONFIG_HOME:-${HOME}/.config}/dconf/gnome-workflow.conf"
+if [[ ! -f "${config_file}" ]]; then
+    config_file="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.config/dconf" && pwd)/gnome-workflow.conf"
+fi
+dconf load / < "${config_file}"
