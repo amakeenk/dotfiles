@@ -45,7 +45,7 @@ rewaita
 ripgrep
 showtime
 starship
-swappy
+satty
 systemd-ssh-agent
 telegram-desktop
 tgpt

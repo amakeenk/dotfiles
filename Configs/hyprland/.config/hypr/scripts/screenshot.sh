@@ -37,10 +37,10 @@ choice=$(echo -e "$menu" | fuzzel --dmenu --width=55 --lines=8 --hide-prompt)
 case "$choice" in
   "${menu_item_region_clipboard_only}") hyprshot -m region --clipboard-only ;;
   "${menu_item_region_save_file}")      hyprshot -m region ;;
-  "${menu_item_region_edit}")           hyprshot -m region --raw | swappy -f - ;;
+  "${menu_item_region_edit}")           hyprshot -m region --raw | satty --filename - ;;
   "${menu_item_output_clipboard_only}") hyprshot -m output --clipboard-only ;;
   "${menu_item_output_save_file}")      hyprshot -m output ;;
-  "${menu_item_output_edit}")           hyprshot -m output --raw | swappy -f - ;;
+  "${menu_item_output_edit}")           hyprshot -m output --raw | satty --filename - ;;
   "${menu_item_rec_region}")
     GEOM=$(slurp -b "000000a0" -c "33ccffffe" -w 2)
     if [ -n "$GEOM" ]; then
