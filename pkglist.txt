@@ -1,8 +1,8 @@
-tgpt
 amberol
 atuin
 bottom
 ddclight
+difftastic
 eza
 fastfetch
 fd
@@ -42,13 +42,16 @@ rewaita
 ripgrep
 showtime
 starship
-tuckr
 swappy
 systemd-ssh-agent
+tgpt
 thunderbird
+trs
+tuckr
 viu
 wayle
 wl-clipboard
+wlctl
 wlogout
 wl-screenrec
 xcp
@@ -59,3 +62,4 @@ zed
 zellij
 zenity
 zoxide
+lightningview
