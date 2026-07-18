@@ -3,6 +3,7 @@ atuin
 bottom
 ddclight
 difftastic
+ekphos
 eza
 fastfetch
 fd
@@ -29,7 +30,9 @@ hyprscratch
 hyprshot
 kitty
 lazygit
+lightningview
 logitune
+lumen
 nautilus
 neovim
 neowatch
@@ -44,6 +47,7 @@ showtime
 starship
 swappy
 systemd-ssh-agent
+telegram-desktop
 tgpt
 thunderbird
 trs
@@ -62,4 +66,3 @@ zed
 zellij
 zenity
 zoxide
-lightningview
