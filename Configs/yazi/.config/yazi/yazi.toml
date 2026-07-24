@@ -19,8 +19,8 @@ mime = "{audio,video}/*"
 run = 'faster-piper -- "$HOME/.config/yazi/scripts/media-preview.sh" "$1" "$w" "$h"'
 
 [[plugin.prepend_previewers]]
-mime = "text/markdown"
-run = 'faster-piper -- glow -w $w "$1"'
+url = "*.md"
+run = 'faster-piper -- mdcat --ansi --columns $w "$1"'
 
 [[plugin.prepend_previewers]]
 mime = "application/pdf"

@@ -33,6 +33,7 @@ lazygit
 lightningview
 logitune
 lumen
+mdcat
 nautilus
 neovim
 neowatch
