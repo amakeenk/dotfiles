@@ -43,9 +43,9 @@ pwvucontrol
 qview
 rewaita
 ripgrep
+satty
 showtime
 starship
-satty
 systemd-ssh-agent
 telegram-desktop
 tgpt
@@ -65,4 +65,5 @@ yazi
 zed
 zellij
 zenity
+zoryn
 zoxide
