@@ -9,7 +9,6 @@ show = true
 left = [
     "custom-uptime",
     "media",
-    "window-title",
 ]
 center = ["hyprland-workspaces"]
 right = [
