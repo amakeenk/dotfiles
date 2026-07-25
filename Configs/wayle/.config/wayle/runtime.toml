@@ -7,6 +7,7 @@ button-variant = "basic"
 monitor = "*"
 show = true
 left = [
+    "custom-uptime",
     "media",
     "window-title",
 ]
@@ -113,6 +114,31 @@ restart-interval-ms = 1000
 format = "{{ output }}"
 hide-if-empty = true
 icon-name = "ld-globe-symbolic"
+icon-show = true
+icon-color = "#dcd7ba"
+icon-bg-color = "auto"
+label-show = true
+label-color = "#dcd7ba"
+label-max-length = 0
+button-bg-color = "bg-surface-elevated"
+border-show = false
+border-color = "auto"
+left-click = ""
+right-click = ""
+middle-click = ""
+scroll-up = ""
+scroll-down = ""
+
+[[modules.custom]]
+id = "uptime"
+command = "~/.config/wayle/scripts/uptime.py"
+mode = "poll"
+interval-ms = 1000
+restart-policy = "never"
+restart-interval-ms = 1000
+format = "{{ output }}"
+hide-if-empty = true
+icon-name = "ld-clock-symbolic"
 icon-show = true
 icon-color = "#dcd7ba"
 icon-bg-color = "auto"

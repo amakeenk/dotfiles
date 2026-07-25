@@ -1,0 +1,1 @@
+/home/amakeenk/.dotfiles/Configs/hyprland/.config/hypr/scripts/uptime.py
