@@ -272,12 +272,6 @@ plugins {
         pipe_name "zjstatus_hints"
         hide_in_base_mode false
     }
-    autolock location="https://github.com/fresh2dev/zellij-autolock/releases/latest/download/zellij-autolock.wasm" {
-        is_enabled true
-        triggers "nvim|vim|git|fzf|zoxide|atuin"
-        reaction_seconds "0.3"
-        print_to_log false
-    }
     zellij-forgot location="https://github.com/karimould/zellij-forgot/releases/latest/download/zellij_forgot.wasm"
 }
 
@@ -286,7 +280,6 @@ plugins {
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
     "zjstatus-hints"
-    // "autolock"
 }
 web_client {
     font "monospace"
