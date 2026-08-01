@@ -76,6 +76,11 @@ on = [ "y", "c" ]
 run = "plugin copy-file-contents"
 desc = "Copy file contents to clipboard"
 
+[[mgr.prepend_keymap]]
+on = [ "y", "y" ]
+run = "yank"
+desc = "Copy selected files"
+
 # -== plugin smart-enter ==-
 [[mgr.prepend_keymap]]
 on = "<Right>"
