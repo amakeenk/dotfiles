@@ -247,6 +247,7 @@ alias wlp='wl-paste'
 alias tvp='tv procs'
 alias tvf='tv files'
 alias tvt='tv text'
+alias yz='yazi'
 
 if [ "$__bash_is_interactive" -eq 1 ]; then
     eval "$(starship init bash)"
