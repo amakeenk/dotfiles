@@ -165,7 +165,7 @@ y() {
 _tgpt_bash() {
     local cmd
     if [[ -n "$READLINE_LINE" ]]; then
-        cmd=$(tgpt -q -w --provider pollinations --preprompt 'Ты shell assistant для Linux bash. Верни только одну bash-команду без markdown, без объяснений. Не выполняй команду.' "$READLINE_LINE")
+        cmd=$(tgpt -q -w --provider opencode --preprompt 'Ты shell assistant для Linux bash. Верни только одну bash-команду без markdown, без объяснений. Не выполняй команду.' "$READLINE_LINE")
         cmd=${cmd//$'\r'/}
         cmd=${cmd%$'\n'}
         READLINE_LINE=$cmd
