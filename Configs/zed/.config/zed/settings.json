@@ -1,4 +1,5 @@
 {
+    "cli_default_open_behavior": "new_window",
     "project_panel": {
         "hide_hidden": false,
         "hide_root": false,
@@ -21,7 +22,7 @@
     "ui_font_size": 14,
     "buffer_font_size": 13,
     "autosave": "on_focus_change",
-    "restore_on_startup": "launchpad",
+    "restore_on_startup": "last_session",
     "base_keymap": "VSCode",
     "show_whitespaces": "all",
     "ui_font_family": "FiraCode Nerd Font Mono",
