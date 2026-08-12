@@ -15,7 +15,7 @@ $ tuckr status
 ## GNOME workflow profile
 
 The GNOME profile recreates the Hyprland-oriented workflow with fixed workspaces,
-custom application shortcuts, automatic window placement, ddterm, Simple Tiling,
+custom application shortcuts, automatic window placement, Simple Tiling,
 and Copyous. Install the required GNOME extensions, link the profile, then apply
 its text-based dconf settings:
 
