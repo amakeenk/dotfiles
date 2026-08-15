@@ -9,9 +9,11 @@ show = true
 left = [
     "custom-uptime",
     "media",
+    "cava",
 ]
 center = ["hyprland-workspaces"]
 right = [
+    "netstat",
     "custom-updates",
     "volume",
     "notifications",
@@ -41,6 +43,10 @@ border-color = "#dcd7ba"
 icon-color = "#dcd7ba"
 icon-bg-color = "#dcd7ba"
 label-color = "#dcd7ba"
+
+[modules.cava]
+color = "#dcd7ba"
+border-color = "#dcd7ba"
 
 [modules.clock]
 format = "%T %d.%m.%Y"
@@ -79,6 +85,13 @@ border-color = "#dcd7ba"
 icon-color = "#dcd7ba"
 icon-bg-color = "#dcd7ba"
 label-color = "#dcd7ba"
+
+[modules.netstat]
+border-color = "#dcd7ba"
+icon-color = "#dcd7ba"
+icon-bg-color = "#dcd7ba"
+label-color = "#dcd7ba"
+button-bg-color = "transparent"
 
 [modules.notifications]
 icon-color = "#dcd7ba"
