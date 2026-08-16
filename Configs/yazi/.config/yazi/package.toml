@@ -34,11 +34,6 @@ rev = "598cdb6"
 hash = "187cc58ba7ac3befd49c342129e6f1b6"
 
 [[plugin.deps]]
-use = "yazi-rs/plugins:smart-paste"
-rev = "598cdb6"
-hash = "3f8d49413bc8691b4c652eb417a20178"
-
-[[plugin.deps]]
 use = "cap153/tv"
 rev = "b6b1f12"
 hash = "4bdf0523d3711d20982ad80b061dedf2"
