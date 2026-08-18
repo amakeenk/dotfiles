@@ -16,6 +16,7 @@ fuse-sshfs
 fuzzel
 fzf
 gnome-text-editor
+gtk-theme-kanagawa
 helix
 helix-grammars
 hyprland
