@@ -248,6 +248,11 @@ alias tvp='tv procs'
 alias tvf='tv files'
 alias tvt='tv text'
 alias yz='yazi'
+alias rpmq='rpm -q'
+alias rpmqa='rpm -qa | rg'
+alias rpmql='rpm -ql'
+alias rpmqi='rpm -qi'
+alias rpmqf='rpm -qf'
 
 if [ "$__bash_is_interactive" -eq 1 ]; then
     eval "$(starship init bash)"
