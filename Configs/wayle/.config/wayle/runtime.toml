@@ -8,12 +8,14 @@ monitor = "*"
 show = true
 left = [
     "custom-uptime",
+    "separator",
     "media",
     "cava",
+    "separator",
+    "hyprland-workspaces",
 ]
-center = ["hyprland-workspaces"]
+center = ["clock"]
 right = [
-    "netstat",
     "custom-updates",
     "custom-brightness",
     "volume",
@@ -23,7 +25,7 @@ right = [
     "custom-vpn",
     "network",
     "bluetooth",
-    "clock",
+    "netstat",
     "dashboard",
 ]
 
@@ -127,6 +129,7 @@ restart-interval-ms = 1000
 format = "{{ percentage }}%"
 tooltip-format = "Яркость монитора: {{ percentage }}%"
 hide-if-empty = false
+icon-name = ""
 icon-names = [
     "ld-sun-dim-symbolic",
     "ld-sun-medium-symbolic",
