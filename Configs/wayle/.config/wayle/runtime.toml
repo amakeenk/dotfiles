@@ -15,6 +15,7 @@ center = ["hyprland-workspaces"]
 right = [
     "netstat",
     "custom-updates",
+    "custom-brightness",
     "volume",
     "notifications",
     "keyboard-input",
@@ -115,6 +116,37 @@ label-color = "#dcd7ba"
 [modules.window-title]
 icon-color = "#dcd7ba"
 label-color = "#dcd7ba"
+
+[[modules.custom]]
+id = "brightness"
+command = "~/.config/wayle/scripts/monitor_brightness.sh"
+mode = "poll"
+interval-ms = 5000
+restart-policy = "never"
+restart-interval-ms = 1000
+format = "{{ percentage }}%"
+tooltip-format = "Яркость монитора: {{ percentage }}%"
+hide-if-empty = false
+icon-names = [
+    "ld-sun-dim-symbolic",
+    "ld-sun-medium-symbolic",
+    "ld-sun-symbolic",
+]
+icon-show = true
+icon-color = "#dcd7ba"
+icon-bg-color = "auto"
+label-show = true
+label-color = "#dcd7ba"
+label-max-length = 0
+button-bg-color = "bg-surface-elevated"
+border-show = false
+border-color = "auto"
+left-click = ""
+right-click = ""
+middle-click = ""
+scroll-up = "~/.config/wayle/scripts/monitor_brightness.sh up"
+scroll-down = "~/.config/wayle/scripts/monitor_brightness.sh down"
+on-action = "~/.config/wayle/scripts/monitor_brightness.sh"
 
 [[modules.custom]]
 id = "vpn"
