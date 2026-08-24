@@ -1,0 +1,101 @@
+confirm-before-quit = true
+draw-bold-text-with-light-colors = false
+padding = [1]
+scrollback-history-limit = 100000
+use-fork = false
+copy-on-select = true
+
+[bell]
+audio = false
+visual = false
+
+[colors]
+# kanagawa theme
+foreground = "#dcd7ba"
+background = "#1f1f28"
+cursor = "#c8c093"
+selection-foreground = "#c8c093"
+selection-background = "#2d4f67"
+black = "#16161d"
+red = "#c34043"
+green = "#76946a"
+yellow = "#c0a36e"
+blue = "#7e9cd8"
+magenta = "#957fb8"
+cyan = "#6a9589"
+white = "#c8c093"
+light-black = "#727169"
+light-red = "#e82424"
+light-green = "#98bb6c"
+light-yellow = "#e6c384"
+light-blue = "#7fb4ca"
+light-magenta = "#938aa9"
+light-cyan = "#7aa89f"
+light-white = "#dcd7ba"
+tabs = "#727169"
+tabs-active = "#c8c093"
+bar = "#1f1f28"
+split = "#72a7bc"
+hint-foreground = "#1f1f28"
+hint-background = "#e6c384"
+
+[cursor]
+shape = "block"
+blinking = false
+
+[editor]
+program = "hx"
+args = []
+
+[effects]
+trail-cursor = true
+trail-cursor-opacity = 0.65
+trail-cursor-decay = [100, 500]
+trail-cursor-start-threshold = 1
+
+[fonts]
+family = "FiraCode Nerd Font"
+size = 13
+hinting = true
+
+[navigation]
+mode = "Tab"
+clickable = true
+hide-if-single = false
+current-working-directory = true
+
+[panel]
+padding = [1]
+row-gap = 1
+column-gap = 1
+
+[shell]
+program = "/usr/bin/zellij"
+args = []
+
+[window]
+decorations = "Disabled"
+colorspace = "srgb"
+
+[bindings]
+keys = [
+  { key = "left", with = "shift", action = "SelectPrevTab" },
+  { key = "right", with = "shift", action = "SelectNextTab" },
+  { key = "1", with = "control | shift", esc = "apt-repo add 123 && apt-get update && apt-get dist-upgrade" },
+]
+
+[hints]
+alphabet = "asdfghjklqwertyuiop"
+
+[[hints.rules]]
+regex = '(https://|http://)[^\u{0000}-\u{001F}\u{007F}-\u{009F}<>"\s{-}\^⟨⟩`\\]+'
+hyperlinks = true
+post-processing = true
+persist = false
+
+[hints.rules.action]
+command = "xdg-open"
+
+[hints.rules.binding]
+key = "O"
+mods = ["Control", "Shift"]
