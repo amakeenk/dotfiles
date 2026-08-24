@@ -29,7 +29,7 @@ $ tuckr add gnome
 $ ~/.local/bin/apply-hypr-workflow
 ```
 
-The profile expects Kitty, Fuzzel, Nautilus, Firefox, Thunderbird, Zed, Text
+The profile expects Rio, Fuzzel, Nautilus, Firefox, Thunderbird, Zed, Text
 Editor, Fractal, and Telegram to be installed. Log out and back in if GNOME does
 not load a newly enabled extension immediately.
 

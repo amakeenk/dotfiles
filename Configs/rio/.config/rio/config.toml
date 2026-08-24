@@ -4,6 +4,11 @@ padding = [1]
 scrollback-history-limit = 100000
 use-fork = false
 copy-on-select = true
+hide-mouse-cursor-when-typing = true
+enable-scroll-bar = false
+
+[renderer]
+disable-unfocused-render = true
 
 [bell]
 audio = false
@@ -76,12 +81,15 @@ args = []
 [window]
 decorations = "Disabled"
 colorspace = "srgb"
+quake-width-percentage = 1.0
+quake-height-percentage = 0.4
 
 [bindings]
 keys = [
   { key = "left", with = "shift", action = "SelectPrevTab" },
   { key = "right", with = "shift", action = "SelectNextTab" },
   { key = "1", with = "control | shift", esc = "apt-repo add 123 && apt-get update && apt-get dist-upgrade" },
+  { key = "F12", action = "ToggleQuake" },
 ]
 
 [hints]

@@ -261,7 +261,7 @@ if [ "$__bash_is_interactive" -eq 1 ]; then
     eval "$(atuin init bash)"
 fi
 
-# for kitty
+# terminal compatibility
 export TERM=xterm-256color
 
 # for aikido safe chain

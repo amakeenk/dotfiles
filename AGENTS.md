@@ -20,7 +20,7 @@ Match the style of the file you are editing. Shell code in this repo uses Bash w
 Use the formatter implied by the Neovim setup when possible: `shfmt` for shell, `stylua` for Lua, `taplo` for TOML, `prettier` for JSON/SCSS/Markdown, and `kdlfmt` for KDL.
 
 ## Testing Guidelines
-There is no centralized automated test suite, so validate only what you touched. Re-run syntax checks for edited scripts, run `tuckr status`, and manually verify UI-facing changes in the relevant app. For Hyprland, Wayle, Kitty, or Yazi changes, include a short note on what was exercised; screenshots are useful when appearance or layout changed.
+There is no centralized automated test suite, so validate only what you touched. Re-run syntax checks for edited scripts, run `tuckr status`, and manually verify UI-facing changes in the relevant app. For Hyprland, Wayle, Rio, or Yazi changes, include a short note on what was exercised; screenshots are useful when appearance or layout changed.
 
 ## Commit & Pull Request Guidelines
 Use Conventional Commit subjects in the form `type(scope): imperative summary`; both the type and scope are mandatory. Use the appropriate type, such as `feat`, `fix`, `chore`, `docs`, `refactor`, `style`, `test`, `perf`, `build`, `ci`, or `revert`. For example: `feat(hyprland): start desktop portals on login`.

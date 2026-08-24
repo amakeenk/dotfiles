@@ -45,6 +45,7 @@ pwvucontrol
 qview
 rewaita
 ripgrep
+rio
 satty
 showtime
 starship
