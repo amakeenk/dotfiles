@@ -62,6 +62,12 @@ trail-cursor-start-threshold = 1
 family = "FiraCode Nerd Font"
 size = 13
 hinting = true
+symbol-map = [
+  { start = "2E80", end = "30FF", font-family = "LXGW WenKai Mono" },
+  { start = "31F0", end = "9FFF", font-family = "LXGW WenKai Mono" },
+  { start = "F900", end = "FAFF", font-family = "LXGW WenKai Mono" },
+  { start = "20000", end = "323AF", font-family = "LXGW WenKai Mono" },
+]
 
 [navigation]
 mode = "Tab"
