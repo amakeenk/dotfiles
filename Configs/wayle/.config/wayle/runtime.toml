@@ -11,11 +11,14 @@ left = [
     "separator",
     "media",
     "cava",
-    "separator",
-    "hyprland-workspaces",
 ]
-center = ["clock"]
+center = [
+    "hyprland-workspaces",
+    "separator",
+    "clock",
+]
 right = [
+    "netstat",
     "custom-updates",
     "custom-brightness",
     "volume",
@@ -25,7 +28,6 @@ right = [
     "custom-vpn",
     "network",
     "bluetooth",
-    "netstat",
     "dashboard",
 ]
 
@@ -222,7 +224,7 @@ label-max-length = 0
 button-bg-color = "bg-surface-elevated"
 border-show = false
 border-color = "auto"
-left-click = "rio --title-placeholder float_terminal -e ~/.config/wayle/scripts/update_system.sh"
+left-click = "rioterm --title-placeholder float_terminal -e ~/.config/wayle/scripts/update_system.sh"
 right-click = ""
 middle-click = ""
 scroll-up = ""
