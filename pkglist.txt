@@ -55,7 +55,6 @@ tgpt
 thunderbird
 trs
 tuckr
-viu
 wayle
 wl-clipboard
 wlctl

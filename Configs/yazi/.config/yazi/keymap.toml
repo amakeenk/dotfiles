@@ -87,6 +87,12 @@ on = "<Right>"
 run = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
 
+# -== built-in spot ==-
+[[mgr.prepend_keymap]]
+on = "i"
+run = "spot"
+desc = "Show hovered file information"
+
 # -== plugin copy-as ==-
 [[mgr.prepend_keymap]]
 on = "Y"

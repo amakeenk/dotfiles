@@ -1,5 +1,5 @@
 [mgr]
-ratio = [ 1, 3, 4 ]
+ratio = [1, 3, 4]
 sort_by = "mtime"
 sort_sensitive = false
 sort_reverse = true
@@ -10,21 +10,15 @@ linemode = "size_mtime"
 url = "*/"
 run = "eza-preview"
 
+# Image, video, and PDF previews use Yazi's built-in graphics previewers.
+# KGP inside Zellij requires Yazi >= 26.8.15 and Zellij >= 0.45.0.
 [[plugin.prepend_previewers]]
-mime = "image/*"
-run = 'faster-piper -- "$HOME/.config/yazi/scripts/media-preview.sh" "$1" "$w" "$h"'
-
-[[plugin.prepend_previewers]]
-mime = "{audio,video}/*"
-run = 'faster-piper -- "$HOME/.config/yazi/scripts/media-preview.sh" "$1" "$w" "$h"'
+mime = "audio/*"
+run = 'faster-piper -- "$HOME/.config/yazi/scripts/media-preview.sh" "$1" "$h"'
 
 [[plugin.prepend_previewers]]
 url = "*.md"
 run = 'faster-piper -- mdcat --ansi --columns $w "$1"'
-
-[[plugin.prepend_previewers]]
-mime = "application/pdf"
-run = 'faster-piper -- pdftoppm -r 220 -f 1 -singlefile -png "$1" | viu -w $w -'
 
 [[plugin.prepend_previewers]]
 mime = "application/bittorrent"
@@ -36,24 +30,24 @@ run = "ouch"
 
 [opener]
 image = [
-	{ run = 'lightningview %s1; hyprctl dispatch focuswindow "title:^(yazi)$"', block = true, desc = "LightningView", for = "unix" },
+  { run = 'lightningview %s1; hyprctl dispatch focuswindow "title:^(yazi)$"', block = true, desc = "LightningView", for = "unix" },
 ]
 
-edit = [
-	{ run = 'hx %s', block = true, desc = "Helix", for = "unix" },
-]
+edit = [{ run = 'hx %s', block = true, desc = "Helix", for = "unix" }]
 
 extract = [
-	{ run = 'ouch d -y "$@"', desc = "Extract here with ouch", for = "unix" },
+  { run = 'ouch d -y "$@"', desc = "Extract here with ouch", for = "unix" },
 ]
 
 [open]
 prepend_rules = [
-	{ mime = "image/*", use = "image" },
-	{ mime = "text/plain", use = "edit" },
-	{ mime = "text/*", use = "edit" },
-	{ mime = "application/json", use = "edit" },
+  { mime = "image/*", use = "image" },
+  { mime = "text/plain", use = "edit" },
+  { mime = "text/*", use = "edit" },
+  { mime = "application/json", use = "edit" },
 ]
 
 [preview]
+max_width = 1600
+max_height = 1100
 image_delay = 0

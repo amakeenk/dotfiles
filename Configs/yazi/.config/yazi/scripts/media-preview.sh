@@ -3,9 +3,7 @@
 set -euo pipefail
 
 file_path="${1:?missing file path}"
-preview_width="${2:-80}"
-preview_height="${3:-24}"
-image_block_height=0
+preview_height="${2:-24}"
 preview_colors=1
 
 if [[ -n "${NO_COLOR:-}" || "${TERM:-}" == "dumb" ]]; then
@@ -14,82 +12,6 @@ fi
 
 detect_mime() {
     file -Lb --mime-type -- "$file_path" 2>/dev/null || true
-}
-
-is_image_mime() {
-    local mime_type
-    mime_type="$(detect_mime)"
-    [[ "$mime_type" == image/* ]]
-}
-
-is_video_mime() {
-    local mime_type
-    mime_type="$(detect_mime)"
-    [[ "$mime_type" == video/* ]]
-}
-
-clamp() {
-    local value="$1"
-    local min_value="$2"
-    local max_value="$3"
-
-    if (( value < min_value )); then
-        printf '%s\n' "$min_value"
-    elif (( value > max_value )); then
-        printf '%s\n' "$max_value"
-    else
-        printf '%s\n' "$value"
-    fi
-}
-
-render_image() {
-    local image_height
-
-    if (( preview_height < 12 )); then
-        image_height=$(( preview_height / 2 ))
-    else
-        image_height=$(( preview_height * 45 / 100 ))
-    fi
-
-    image_height="$(clamp "$image_height" 1 "$preview_height")"
-    image_block_height=$(( image_height + 1 ))
-
-    if magick "$file_path" -auto-orient -thumbnail "${preview_width}x${image_height}>" png:- 2>/dev/null \
-        | viu --static --blocks --width "$preview_width" --height "$image_height" - 2>/dev/null; then
-        :
-    else
-        viu --static --blocks --width "$preview_width" --height "$image_height" -- "$file_path" 2>/dev/null || true
-    fi
-
-    printf '\n'
-}
-
-render_video_frame() {
-    local image_height
-    local frame_rendered=0
-
-    if (( preview_height < 12 )); then
-        image_height=$(( preview_height / 2 ))
-    else
-        image_height=$(( preview_height * 45 / 100 ))
-    fi
-
-    image_height="$(clamp "$image_height" 1 "$preview_height")"
-    image_block_height=$(( image_height + 1 ))
-
-    if ffmpeg -loglevel error -y -ss 1 -i "$file_path" -frames:v 1 -f image2pipe -vcodec png - 2>/dev/null \
-        | viu --static --blocks --width "$preview_width" --height "$image_height" - 2>/dev/null; then
-        frame_rendered=1
-    elif ffmpeg -loglevel error -y -i "$file_path" -frames:v 1 -f image2pipe -vcodec png - 2>/dev/null \
-        | viu --static --blocks --width "$preview_width" --height "$image_height" - 2>/dev/null; then
-        frame_rendered=1
-    fi
-
-    if (( frame_rendered == 1 )); then
-        printf '\n'
-    else
-        image_block_height=0
-    fi
 }
 
 render_fallback() {
@@ -214,22 +136,6 @@ render_mediainfo() {
 
 main() {
     local info_lines
-    local max_info_lines
-
-    if [[ "${YAZI_PREVIEW_NO_IMAGE:-0}" != "1" ]] && is_image_mime; then
-        render_image
-    elif [[ "${YAZI_PREVIEW_NO_IMAGE:-0}" != "1" ]] && is_video_mime; then
-        render_video_frame
-    fi
-
-    if (( image_block_height > 0 )); then
-        max_info_lines=$(( preview_height - image_block_height ))
-        if (( max_info_lines < 4 )); then
-            max_info_lines=4
-        fi
-    else
-        max_info_lines="$preview_height"
-    fi
 
     info_lines="$(render_mediainfo || true)"
 
@@ -238,7 +144,7 @@ main() {
         exit 0
     fi
 
-    printf '%s\n' "$info_lines" | head -n "$max_info_lines"
+    printf '%s\n' "$info_lines" | head -n "$preview_height"
 }
 
 main "$@"

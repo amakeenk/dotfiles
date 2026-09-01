@@ -462,6 +462,12 @@ scrollback_lines_to_serialize 0
 // Default: true (if the host terminal supports it)
 // 
 // support_kitty_keyboard_protocol false
+
+// Enable Kitty Graphics Protocol passthrough for image previews.
+// The host terminal must also support it (Rio >= 0.5.16 and Kitty do), and
+// Yazi needs to be >= 26.8.15 to select KGP when running inside Zellij.
+support_kitty_graphics_protocol true
+
 // Whether to make sure a local web server is running when a new Zellij session starts.
 // This web server will allow creating new sessions and attaching to existing ones that have
 // opted in to being shared in the browser.
