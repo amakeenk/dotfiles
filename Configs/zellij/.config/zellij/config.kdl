@@ -342,6 +342,9 @@ mouse_mode true
 // 
 pane_frames true
 
+// Draw a border on every side of each pane.
+pane_frame_style "full"
+
  
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
