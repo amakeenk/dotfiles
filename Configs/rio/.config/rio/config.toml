@@ -72,8 +72,9 @@ symbol-map = [
 [navigation]
 mode = "Tab"
 clickable = true
-hide-if-single = false
+hide-if-single = true
 current-working-directory = true
+max-tab-width = 180
 
 [panel]
 padding = [1]
