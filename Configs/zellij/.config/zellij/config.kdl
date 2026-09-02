@@ -153,6 +153,19 @@ keybinds clear-defaults=true {
         bind "Alt n" { NewPane; }
         bind "Alt o" { MoveTab "right"; }
         bind "Alt p" { TogglePaneInGroup; }
+        bind "Alt t" { NewTab; }
+        bind "Alt 1" { GoToTab 1; }
+        bind "Alt 2" { GoToTab 2; }
+        bind "Alt 3" { GoToTab 3; }
+        bind "Alt 4" { GoToTab 4; }
+        bind "Alt 5" { GoToTab 5; }
+        bind "Alt 6" { GoToTab 6; }
+        bind "Alt 7" { GoToTab 7; }
+        bind "Alt 8" { GoToTab 8; }
+        bind "Alt 9" { GoToTab 9; }
+        bind "Alt r" { SwitchToMode "renametab"; TabNameInput 0; }
+        bind "Alt Shift left" { MoveTab "left"; }
+        bind "Alt Shift right" { MoveTab "right"; }
         bind "Alt Shift p" { ToggleGroupMarking; }
         bind "Ctrl q" { Quit; }
     }
