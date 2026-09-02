@@ -94,6 +94,8 @@ quake-height-percentage = 0.4
 keys = [
   { key = "left", with = "shift", action = "SelectPrevTab" },
   { key = "right", with = "shift", action = "SelectNextTab" },
+  { key = "left", with = "control | shift", action = "MoveCurrentTabToPrev" },
+  { key = "right", with = "control | shift", action = "MoveCurrentTabToNext" },
   { key = "1", with = "control | shift", esc = "apt-repo add 123 && apt-get update && apt-get dist-upgrade" },
   { key = "F12", action = "ToggleQuake" },
 ]
