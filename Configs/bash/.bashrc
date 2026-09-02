@@ -256,6 +256,9 @@ alias rpmqi='rpm -qi'
 alias rpmqf='rpm -qf'
 
 if [ "$__bash_is_interactive" -eq 1 ]; then
+    if command -v codex >/dev/null 2>&1; then
+        eval "$(codex completion bash 2>/dev/null)"
+    fi
     eval "$(starship init bash)"
     eval "$(fzf --bash)"
     eval "$(zoxide init --cmd cd bash)"
