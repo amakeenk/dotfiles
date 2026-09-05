@@ -46,7 +46,10 @@ keybinds clear-defaults=true {
         bind "k" { GoToPreviousTab; }
         bind "l" { GoToNextTab; }
         bind "n" { NewTab; SwitchToMode "normal"; }
-        bind "r" { SwitchToMode "renametab"; TabNameInput 0; }
+        bind "r" {
+            MessagePlugin "smart-tabs" { name "set_focused_to_manual"; }
+            SwitchToMode "renametab"; TabNameInput 0;
+        }
         bind "s" { ToggleActiveSyncTab; SwitchToMode "normal"; }
         bind "Ctrl t" { SwitchToMode "normal"; }
         bind "x" { CloseTab; SwitchToMode "normal"; }
@@ -163,7 +166,10 @@ keybinds clear-defaults=true {
         bind "Alt 7" { GoToTab 7; }
         bind "Alt 8" { GoToTab 8; }
         bind "Alt 9" { GoToTab 9; }
-        bind "Alt r" { SwitchToMode "renametab"; TabNameInput 0; }
+        bind "Alt r" {
+            MessagePlugin "smart-tabs" { name "set_focused_to_manual"; }
+            SwitchToMode "renametab"; TabNameInput 0;
+        }
         bind "Alt Shift left" { MoveTab "left"; }
         bind "Alt Shift right" { MoveTab "right"; }
         bind "Alt Shift p" { ToggleGroupMarking; }
@@ -223,7 +229,19 @@ keybinds clear-defaults=true {
         bind "enter" { SwitchToMode "search"; }
     }
     renametab {
-        bind "esc" { UndoRenameTab; SwitchToMode "tab"; }
+        // Clearing the name can restore managed mode before typing finishes.
+        // Reaffirm manual mode when committing the new name.
+        bind "enter" {
+            MessagePlugin "smart-tabs" { name "set_focused_to_manual"; }
+            SwitchToMode "normal"
+        }
+        bind "esc" {
+            UndoRenameTab
+            SwitchToMode "tab"
+            // Force a fresh rename even if clearing the name restored managed mode.
+            MessagePlugin "smart-tabs" { name "set_focused_to_manual"; }
+            MessagePlugin "smart-tabs" { name "set_focused_to_managed"; }
+        }
     }
     shared_among "renametab" "renamepane" {
         bind "Ctrl c" { SwitchToMode "normal"; }
@@ -242,7 +260,10 @@ keybinds clear-defaults=true {
         bind "space" { NextSwapLayout; }
         bind "\"" { NewPane "down"; SwitchToMode "normal"; }
         bind "%" { NewPane "right"; SwitchToMode "normal"; }
-        bind "," { SwitchToMode "renametab"; }
+        bind "," {
+            MessagePlugin "smart-tabs" { name "set_focused_to_manual"; }
+            SwitchToMode "renametab";
+        }
         bind "[" { SwitchToMode "scroll"; }
         bind "Ctrl /" { Write 2; SwitchToMode "normal"; }
         bind "c" { NewTab; SwitchToMode "normal"; }
@@ -267,6 +288,32 @@ keybinds clear-defaults=true {
 // Plugin aliases - can be used to change the implementation of Zellij
 // changing these requires a restart to take effect
 plugins {
+    smart-tabs location="https://github.com/YesYouKenSpace/zellij-smart-tabs/releases/download/v0.2.4/zellij-smart-tabs.wasm" {
+        format "{{ short_dir }}{% if program %} · {{ program }}{% endif %}{% if status %} {{ status }}{% endif %}"
+        // The installed OpenCode launcher is: node /path/to/opencode.
+        skip_programs {
+            node
+        }
+        sub {
+            program {
+                bash ""
+                zsh ""
+                fish ""
+                hx "hx"
+                codex "codex"
+                claude "claude"
+                opencode "opencode"
+                pi "pi"
+            }
+            status {
+                idle ""
+                running "⏳"
+                pending "⏳"
+                done "✅"
+                error "❌"
+            }
+        }
+    }
     about location="zellij:about"
     compact-bar location="zellij:compact-bar"
     configuration location="zellij:configuration"
@@ -292,6 +339,7 @@ plugins {
 // eg. "file:/path/to/my-plugin.wasm"
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
+    smart-tabs
     "zjstatus-hints"
 }
 web_client {
