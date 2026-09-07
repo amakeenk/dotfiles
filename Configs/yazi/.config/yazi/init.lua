@@ -1,4 +1,5 @@
 require("full-border"):setup()
+require("easyjump"):setup()
 require("sshfs"):setup()
 require("eza-preview"):setup({
 	default_tree = true,
