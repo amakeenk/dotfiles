@@ -9,12 +9,6 @@ on = "<Esc>"
 run = "close"
 desc = "Cancel input"
 
-# -== plugin hxjump ==-
-[[mgr.prepend_keymap]]
-on = "n"
-run = "plugin hxjump"
-desc = "Jump to an item by label"
-
 # -== plugin sshfs ==-
 [[mgr.prepend_keymap]]
 on = [ "M", "s" ]
