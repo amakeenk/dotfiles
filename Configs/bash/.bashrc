@@ -263,6 +263,7 @@ if [ "$__bash_is_interactive" -eq 1 ]; then
     eval "$(fzf --bash)"
     eval "$(zoxide init --cmd cd bash)"
     eval "$(atuin init bash)"
+    eval "$(agf init bash)"
 fi
 
 # terminal compatibility
