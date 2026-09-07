@@ -1,36 +1,36 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "598cdb6"
-hash = "7b625412411be411153886894d9acaf"
+rev = "4dc7f1b"
+hash = "f281261ff04ad7ec867c3f802a50835f"
 
 [[plugin.deps]]
 use = "ndtoan96/ouch"
-rev = "406ce6c"
-hash = "f5afc904d5106ee368c8aa2ded43bd74"
+rev = "cfe4f50"
+hash = "eff5702573b6cfba61e4ac8b1969629a"
 
 [[plugin.deps]]
 use = "llanosrocas/yaziline"
-rev = "25161c1"
-hash = "5c7802a9ac249be88729978e3b9525bc"
+rev = "029b27d"
+hash = "ceeb45e796faf0d9eed10831ffec7701"
 
 [[plugin.deps]]
 use = "alberti42/faster-piper"
-rev = "8b794bf"
-hash = "fac71f8ce9447ad509b5aad9e0d8c694"
+rev = "bb90261"
+hash = "12b5e342d54db42b5b023faa1a11f28e"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "598cdb6"
-hash = "f0c8c378184d5f8abd1b095a443d336d"
+rev = "4dc7f1b"
+hash = "87472b05a8c420100f6a2b9cde1e7746"
 
 [[plugin.deps]]
 use = "AnirudhG07/plugins-yazi:copy-file-contents"
-rev = "71545f4"
-hash = "f8530ee84fee95dbcc26bb1d8d8019c7"
+rev = "3f4f1a3"
+hash = "421263a8558fbd2fdb07a75f074cc6e3"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "598cdb6"
+rev = "4dc7f1b"
 hash = "187cc58ba7ac3befd49c342129e6f1b6"
 
 [[plugin.deps]]
@@ -40,8 +40,8 @@ hash = "4bdf0523d3711d20982ad80b061dedf2"
 
 [[plugin.deps]]
 use = "terrakok/split-tabs"
-rev = "da25bc0"
-hash = "108ee3048ba3a0d1ba77df7c41bcb7fe"
+rev = "d0531f4"
+hash = "4298f0a23f6109a92334eef06fc7ffb9"
 
 [[plugin.deps]]
 use = "ahkohd/eza-preview"
