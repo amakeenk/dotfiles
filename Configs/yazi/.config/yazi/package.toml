@@ -73,6 +73,11 @@ use = "mikavilpas/easyjump.yazi:easyjump"
 rev = "c19fd64"
 hash = "49625b69287597c3b8093c9f1a2f7241"
 
+[[plugin.deps]]
+use = "crawraps/paste-file"
+rev = "0d2941d"
+hash = "b68c013a5899d74b162bc82abd357398"
+
 [[flavor.deps]]
 use = "dangooddd/kanagawa"
 rev = "04985d1"

@@ -9,6 +9,7 @@ plugins/fs-usage.yazi/
 plugins/linemode-plus.yazi/
 plugins/mime-ext.yazi/
 plugins/ouch.yazi/
+plugins/paste-file.yazi/
 plugins/smart-enter.yazi/
 plugins/sshfs.yazi/
 plugins/split-tabs.yazi/
