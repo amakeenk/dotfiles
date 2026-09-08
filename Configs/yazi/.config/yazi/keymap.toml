@@ -77,7 +77,7 @@ desc = "Copy selected files"
 
 # -== plugin paste-file ==-
 [[mgr.prepend_keymap]]
-on = [ "p", "f" ]
+on = [ "y", "p" ]
 run = "plugin paste-file"
 desc = "Create a file from clipboard contents"
 
