@@ -1,0 +1,59 @@
+layout {
+    cwd "/home/amakeenk"
+    tab name="~" focus=true hide_floating_panes=true {
+        pane split_direction="vertical" {
+            pane command="zellij" focus=true size="40%" {
+                args "action" "dump-layout"
+                start_suspended true
+            }
+            pane size="60%" {
+                pane size="50%"
+                pane size="50%"
+            }
+        }
+        pane size=1 borderless=true {
+            plugin location="https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm" {
+                datetime "#[fg=green,bold] {format} "
+                datetime_format "%Y-%m-%d %H:%M:%S"
+                datetime_timezone "Europe/Moscow"
+                format_center "{tabs}"
+                format_left "{mode}"
+                format_right "{pipe_zjstatus_hints}"
+                format_space ""
+                mode_locked "#[bg=red,fg=white] LOCKED "
+                mode_normal "#[bg=green,fg=black] NORMAL "
+                mode_pane "#[bg=cyan,fg=black] PANE "
+                mode_resize "#[bg=magenta,fg=black] RESIZE "
+                mode_scroll "#[bg=blue,fg=white] SCROLL "
+                mode_tab "#[bg=yellow,fg=black] TAB "
+                pipe_zjstatus_hints_format "{output}"
+                tab_active "#[bg=green,fg=black,bold] {index}: {name} "
+                tab_normal "#[fg=gray] {index}: {name} "
+            }
+        }
+    }
+    new_tab_template {
+        pane
+        pane size=1 borderless=true {
+            plugin location="https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm" {
+                datetime "#[fg=green,bold] {format} "
+                datetime_format "%Y-%m-%d %H:%M:%S"
+                datetime_timezone "Europe/Moscow"
+                format_center "{tabs}"
+                format_left "{mode}"
+                format_right "{pipe_zjstatus_hints}"
+                format_space ""
+                mode_locked "#[bg=red,fg=white] LOCKED "
+                mode_normal "#[bg=green,fg=black] NORMAL "
+                mode_pane "#[bg=cyan,fg=black] PANE "
+                mode_resize "#[bg=magenta,fg=black] RESIZE "
+                mode_scroll "#[bg=blue,fg=white] SCROLL "
+                mode_tab "#[bg=yellow,fg=black] TAB "
+                pipe_zjstatus_hints_format "{output}"
+                tab_active "#[bg=green,fg=black,bold] {index}: {name} "
+                tab_normal "#[fg=gray] {index}: {name} "
+            }
+        }
+    }
+}
+
