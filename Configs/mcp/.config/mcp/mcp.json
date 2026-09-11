@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "altlinux-bugzilla": {
+      "url": "https://bugzilla.altlinux.org/mcp.cgi"
+    },
+    "altlinux-gitoskop": {
+      "url": "https://git.altlinux.org/gitoskop/api/_/mcp"
+    },
+    "altlinux-rdb": {
+      "url": "https://rdb.altlinux.org/mcp"
+    }
+  }
+}
