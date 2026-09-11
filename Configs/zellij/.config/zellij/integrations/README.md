@@ -8,10 +8,13 @@ Installed entry points (symlinks to the files in this directory):
 
 - `~/.codex/hooks.json` → `codex-hooks.json`
 - `~/.config/opencode/plugins/smart-tabs.js` → `opencode-smart-tabs.js`
-- `~/.pi/agent/extensions/smart-tabs.ts` → `pi-smart-tabs.ts`
 
-The agent configuration directories are not managed by Tuckr. Preserve these
-symlinks when moving the repository, or recreate them with the new source path.
+The pi smart-tabs extension is managed by the pi Tuckr group (`Configs/pi`):
+`~/.pi/agent/extensions/smart-tabs.ts` → `Configs/pi/.pi/agent/extensions/smart-tabs.ts`.
+
+The codex and opencode configuration directories are not managed by Tuckr.
+Preserve these symlinks when moving the repository, or recreate them with the
+new source path.
 `pane-status.sh` sends only `pane_status` messages using the agent's inherited
 `ZELLIJ_PANE_ID` and session environment. It is silent outside Zellij and bounds
 IPC waits to two seconds. Program/CWD detection belongs entirely to smart-tabs.

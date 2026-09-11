@@ -6,6 +6,9 @@ hook_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 repo_root=$(cd -- "$hook_dir/../.." && pwd)
 integration_dir="$repo_root/Configs/zellij/.config/zellij/integrations"
 
+# The pi smart-tabs extension is managed by the pi Tuckr group (Configs/pi),
+# not by this hook.
+
 link_if_agent_present() {
     local agent=$1
     local source=$2
@@ -48,7 +51,3 @@ link_if_agent_present codex \
 link_if_agent_present opencode \
     "$integration_dir/opencode-smart-tabs.js" \
     "$HOME/.config/opencode/plugins/smart-tabs.js"
-
-link_if_agent_present pi \
-    "$integration_dir/pi-smart-tabs.ts" \
-    "$HOME/.pi/agent/extensions/smart-tabs.ts"

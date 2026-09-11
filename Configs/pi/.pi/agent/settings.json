@@ -1,0 +1,31 @@
+{
+  "lastChangelogVersion": "0.85.1",
+  "terminal": {
+    "showTerminalProgress": true
+  },
+  "enableInstallTelemetry": false,
+  "defaultProvider": "kimi-coding",
+  "defaultModel": "k3-256k",
+  "defaultThinkingLevel": "low",
+  "packages": [
+    "npm:pi-mcp-adapter",
+    "npm:@sumhou/pi-kimi-usage",
+    "npm:pi-lens",
+    "npm:@upstash/context7-pi",
+    "npm:pi-background-tasks@latest",
+    "npm:pi-web-access",
+    "npm:@narumitw/pi-plan-mode",
+    "npm:@narumitw/pi-btw",
+    "npm:pi-powerline-footer"
+  ],
+  "showHardwareCursor": true,
+  "autocompleteMaxVisible": 10,
+  "defaultProjectTrust": "always",
+  "doubleEscapeAction": "tree",
+  "tuiMode": "regular",
+  "theme": "dark",
+  "powerline": {
+    "preset": "default",
+    "placement": "below"
+  }
+}
