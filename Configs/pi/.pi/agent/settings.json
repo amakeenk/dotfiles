@@ -26,6 +26,7 @@
   "theme": "dark",
   "powerline": {
     "preset": "default",
-    "placement": "below"
+    "placement": "below",
+    "welcome": false
   }
 }
