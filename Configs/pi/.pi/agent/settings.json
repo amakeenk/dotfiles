@@ -18,6 +18,9 @@
     "npm:@narumitw/pi-btw",
     "npm:pi-powerline-footer"
   ],
+  "skills": [
+    "~/.agents/skills"
+  ],
   "showHardwareCursor": true,
   "autocompleteMaxVisible": 10,
   "defaultProjectTrust": "always",
