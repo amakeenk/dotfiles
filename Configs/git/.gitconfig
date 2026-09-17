@@ -3,6 +3,7 @@
     email = amakeenk@altlinux.org
 [core]
     editor = hx
+    excludesFile = ~/.gitignore_global
 [log]
     decorate = auto
 [diff]
