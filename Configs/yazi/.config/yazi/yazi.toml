@@ -30,7 +30,7 @@ run = "ouch"
 
 [opener]
 image = [
-  { run = 'lightningview %s1; hyprctl dispatch focuswindow "title:^(yazi)$"', block = true, desc = "LightningView", for = "unix" },
+  { run = 'lightningview %s1; hyprctl dispatch focuswindow "initialtitle:^(yazi)$"', block = true, desc = "LightningView", for = "unix" },
 ]
 
 edit = [{ run = 'hx %s', block = true, desc = "Helix", for = "unix" }]
@@ -42,6 +42,7 @@ extract = [
 [open]
 prepend_rules = [
   { mime = "image/*", use = "image" },
+  { mime = "video/*", use = "image" },
   { mime = "text/plain", use = "edit" },
   { mime = "text/*", use = "edit" },
   { mime = "application/json", use = "edit" },
