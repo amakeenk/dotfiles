@@ -26,7 +26,7 @@
   "defaultProjectTrust": "always",
   "doubleEscapeAction": "tree",
   "tuiMode": "regular",
-  "theme": "dark",
+  "theme": "system",
   "powerline": {
     "preset": "default",
     "placement": "below",
