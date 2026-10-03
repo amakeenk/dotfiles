@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "mcp": {
+      "url": "https://mcp.netcraze.cloud/",
+      "headers": {
+        "Authorization": "Bearer ${NETCRAZE_MCP_TOKEN}"
+      }
+    },
+    "altlinux-bugzilla": {
+      "url": "https://bugzilla.altlinux.org/mcp.cgi",
+      "headers": {
+        "X-Bugzilla-Api-Key": "${BUGZILLA_API_KEY}"
+      }
+    },
+    "altlinux-gitoskop": {
+      "url": "https://git.altlinux.org/gitoskop/api/_/mcp"
+    },
+    "altlinux-rdb": {
+      "url": "https://rdb.altlinux.org/mcp"
+    }
+  }
+}
