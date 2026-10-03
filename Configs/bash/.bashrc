@@ -5,6 +5,11 @@ fi
 
 export EDITOR=hx
 
+# MCP API keys (file is not tracked in git)
+if [ -r ~/.pi/agent/secrets.env ]; then
+    . ~/.pi/agent/secrets.env
+fi
+
 # .bash_profile exports BASH_ENV=~/.bashrc, so this file is also sourced by
 # non-interactive bash processes. Keep aliases/functions available there, but
 # guard readline- and prompt-specific setup below.

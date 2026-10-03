@@ -8,7 +8,6 @@
   "defaultModel": "k3-256k",
   "defaultThinkingLevel": "low",
   "packages": [
-    "npm:pi-mcp-adapter",
     "npm:@sumhou/pi-kimi-usage",
     "npm:pi-openai-codex-usage",
     "npm:pi-lens",
