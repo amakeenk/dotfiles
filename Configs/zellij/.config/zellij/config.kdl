@@ -310,6 +310,9 @@ plugins {
                 pi "pi"
             }
             status {
+                // pi's smart-tabs extension sends pre-rendered "<icon> <model>"
+                // strings (see ~/.pi/agent/extensions/smart-tabs.ts); these plain
+                // words remain for the codex/opencode hooks.
                 idle ""
                 running "⏳"
                 pending "⏳"
