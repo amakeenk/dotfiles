@@ -8,3 +8,5 @@
     decorate = auto
 [diff]
     external = difft
+[pull]
+    rebase = true
