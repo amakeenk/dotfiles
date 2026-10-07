@@ -16,7 +16,8 @@
     "npm:pi-web-access",
     "npm:@narumitw/pi-plan-mode",
     "npm:@narumitw/pi-btw",
-    "npm:pi-powerline-footer"
+    "npm:pi-powerline-footer",
+    "npm:@narumitw/pi-retry"
   ],
   "skills": [
     "~/.agents/skills"
