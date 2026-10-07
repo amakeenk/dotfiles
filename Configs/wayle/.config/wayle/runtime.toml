@@ -16,10 +16,15 @@ center = [
     "hyprland-workspaces",
     "separator",
     "clock",
+    "separator",
+    "custom-updates",
 ]
 right = [
     "netstat",
-    "custom-updates",
+    "cpu",
+    "ram",
+    "storage",
+    "separator",
     "custom-brightness",
     "volume",
     "notifications",
@@ -58,6 +63,13 @@ format = "%T %d.%m.%Y"
 icon-color = "#dcd7ba"
 label-color = "#dcd7ba"
 dropdown-show-seconds = true
+
+[modules.cpu]
+format = "{{ percent }} %"
+border-color = "#dcd7ba"
+icon-color = "#dcd7ba"
+icon-bg-color = "#dcd7ba"
+label-color = "#dcd7ba"
 
 [modules.dashboard]
 icon-override = "si-linux-symbolic"
@@ -103,6 +115,21 @@ icon-color = "#dcd7ba"
 label-color = "#dcd7ba"
 popup-position = "bottom-center"
 popup-max-visible = 3
+
+[modules.ram]
+format = "{{ percent }} %"
+border-color = "#dcd7ba"
+icon-color = "#dcd7ba"
+icon-bg-color = "#dcd7ba"
+label-color = "#dcd7ba"
+
+[modules.storage]
+format = "{{ used_auto }}"
+border-color = "#dcd7ba"
+icon-color = "#dcd7ba"
+icon-bg-color = "#dcd7ba"
+label-color = "#dcd7ba"
+button-bg-color = "transparent"
 
 [modules.volume]
 icon-color = "#dcd7ba"
