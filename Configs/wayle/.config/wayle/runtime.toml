@@ -1,6 +1,8 @@
 [bar]
 scale = 0.800000011920929
 bg = "bg-surface-elevated"
+background-opacity = 90
+rounding = "lg"
 button-variant = "basic"
 
 [[bar.layout]]
