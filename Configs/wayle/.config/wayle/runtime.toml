@@ -82,8 +82,12 @@ dropdown-lock-command = "hyprlock"
 [modules.hyprland-workspaces]
 show-special = false
 app-icons-show = true
+app-icons-fallback = "ld-terminal-symbolic"
 active-indicator = "underline"
 active-color = "#dcd7ba"
+
+[modules.hyprland-workspaces.app-icon-map]
+"*rio*" = "ld-terminal-symbolic"
 
 [modules.keyboard-input]
 icon-color = "#dcd7ba"
