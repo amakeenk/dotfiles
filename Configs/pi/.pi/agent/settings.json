@@ -17,7 +17,8 @@
     "npm:@narumitw/pi-plan-mode",
     "npm:@narumitw/pi-btw",
     "npm:pi-powerline-footer",
-    "npm:@narumitw/pi-retry"
+    "npm:@narumitw/pi-retry",
+    "npm:pi-antigravity"
   ],
   "skills": [
     "~/.agents/skills"
