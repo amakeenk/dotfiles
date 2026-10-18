@@ -1,0 +1,13 @@
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
+
+[[language]]
+name = "json"
+language-servers = ["biome"]
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "file.json"] }
+
+[[language]]
+name = "jsonc"
+language-servers = ["biome"]
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "file.jsonc"] }
