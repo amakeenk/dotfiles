@@ -49,7 +49,7 @@ shape = "block"
 blinking = false
 
 [editor]
-program = "hx"
+program = "ms"
 args = []
 
 [effects]

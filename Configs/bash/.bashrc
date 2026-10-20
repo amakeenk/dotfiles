@@ -3,7 +3,7 @@ if [ -r /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
-export EDITOR=hx
+export EDITOR=ms
 
 # MCP API keys (file is not tracked in git)
 if [ -r ~/.pi/agent/secrets.env ]; then
@@ -223,6 +223,7 @@ alias cp='xcp'
 alias zed='zed-editor'
 alias vim='nvim'
 alias h='hx'
+alias m='ms'
 alias girarbuild='ssh girar build'
 alias girarbuildcom='ssh girar build --commit'
 alias girarrun='ssh girar task run'

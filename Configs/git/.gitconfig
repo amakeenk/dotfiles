@@ -2,7 +2,7 @@
     name = Alexander Makeenkov
     email = amakeenk@altlinux.org
 [core]
-    editor = hx
+    editor = ms
     excludesFile = ~/.gitignore_global
 [log]
     decorate = auto

@@ -33,7 +33,7 @@ image = [
   { run = 'lightningview %s1; hyprctl dispatch focuswindow "initialtitle:^(yazi)$"', block = true, desc = "LightningView", for = "unix" },
 ]
 
-edit = [{ run = 'hx %s', block = true, desc = "Helix", for = "unix" }]
+edit = [{ run = 'ms %s', block = true, desc = "Mitos", for = "unix" }]
 
 extract = [
   { run = "ouch d -y %s", desc = "Extract here with ouch", for = "unix" },
