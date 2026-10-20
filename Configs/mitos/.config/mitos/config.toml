@@ -1,0 +1,55 @@
+theme = "kanagawa"
+
+[editor]
+line-number = "absolute"
+mouse = false
+color-modes = true
+bufferline = "multiple"
+cursorline = true
+auto-format = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal]
+tab = "goto_next_buffer"
+S-tab = "goto_previous_buffer"
+y = "yank_main_selection_to_clipboard"
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
+R = "replace_selections_with_clipboard"
+F2 = ":toggle whitespace.render all none"
+F3 = ":format"
+C-left = "move_prev_word_start"
+C-right = "move_next_word_start"
+
+[keys.normal.space]
+w = ":write"
+W = ":write-all"
+q = ":quit"
+Q = ":write-quit-all"
+x = ":quit!"
+X = ":quit-all!"
+r = ":reload"
+e = [
+	':sh rm -f /tmp/unique-ca1ea106',
+	':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-ca1ea106',
+	':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+	':open %sh{cat /tmp/unique-ca1ea106}',
+	':redraw',
+	':set mouse false',
+	':set mouse true',
+]
+
+
+[keys.select]
+y = "yank_main_selection_to_clipboard"
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
+R = "replace_selections_with_clipboard"
+
+[keys.insert]
+C-left = "move_prev_word_start"
+C-right = "move_next_word_start"
