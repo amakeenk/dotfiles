@@ -6,13 +6,13 @@ plugins/easyjump.yazi/
 plugins/faster-piper.yazi/
 plugins/full-border.yazi/
 plugins/fs-usage.yazi/
-plugins/linemode-plus.yazi/
 plugins/mime-ext.yazi/
 plugins/ouch.yazi/
 plugins/paste-file.yazi/
 plugins/smart-enter.yazi/
 plugins/sshfs.yazi/
 plugins/split-tabs.yazi/
+plugins/supaline.yazi/
 plugins/torrent-preview.yazi/
 plugins/tv.yazi/
 plugins/yaziline.yazi/

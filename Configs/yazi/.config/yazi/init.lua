@@ -20,12 +20,17 @@ require("copy-file-contents"):setup({
 	append_char = "\n",
 	notification = true,
 })
-require("linemode-plus"):setup({
-	date_mode = "custom",
-	custom = {
-		order = { "day", "month", "year" },
-		separator = ".",
-		year_digits = 4,
+-- supaline: multi-column linemode (replaces the removed linemode-plus).
+require("supaline"):setup({
+	linemodes = {
+		detail = {
+			current = {
+				{ "permissions", width = 11 },
+				{ "size", width = 8 },
+				{ "mtime", format = "%d.%m.%Y" },
+			},
+			preview = { "size", { "mtime", format = "%d.%m.%Y" } },
+		},
 	},
 })
 require("fs-usage"):setup({

@@ -54,11 +54,6 @@ rev = "f465282"
 hash = "d849ad596b8a77902e62a42403aeba40"
 
 [[plugin.deps]]
-use = "barbanevosa/linemode-plus"
-rev = "4d0d034"
-hash = "5d0ac26725d9a975bef1d0887374f10e"
-
-[[plugin.deps]]
 use = "walldmtd/fs-usage"
 rev = "4f4992b"
 hash = "61410fb3409c22990a52767c738c2722"
@@ -77,6 +72,11 @@ hash = "49625b69287597c3b8093c9f1a2f7241"
 use = "crawraps/paste-file"
 rev = "0d2941d"
 hash = "b68c013a5899d74b162bc82abd357398"
+
+[[plugin.deps]]
+use = "yohkuri/supaline"
+rev = "867df69"
+hash = "5467441d7083949109bdf6597cb0c0df"
 
 [[flavor.deps]]
 use = "dangooddd/kanagawa"
