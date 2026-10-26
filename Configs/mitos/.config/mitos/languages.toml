@@ -11,3 +11,12 @@ formatter = { command = "biome", args = ["format", "--stdin-file-path", "file.js
 name = "jsonc"
 language-servers = ["biome"]
 formatter = { command = "biome", args = ["format", "--stdin-file-path", "file.jsonc"] }
+
+[language-server.rpmspec-lsp]
+# https://altlinux.space/shaba/rpmspec-lsp
+command = "rpmspec-lsp"
+args = ["--stdio"]
+
+[[language]]
+name = "rpmspec"
+language-servers = ["rpmspec-lsp"]
