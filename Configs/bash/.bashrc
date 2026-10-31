@@ -262,6 +262,7 @@ alias rpmqa='rpm -qa | rg'
 alias rpmql='rpm -ql'
 alias rpmqi='rpm -qi'
 alias rpmqf='rpm -qf'
+alias rpir='rpi --tui-mode regular'
 
 if [ "$__bash_is_interactive" -eq 1 ]; then
     if command -v codex >/dev/null 2>&1; then
